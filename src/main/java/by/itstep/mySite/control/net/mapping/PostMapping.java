@@ -52,14 +52,8 @@ public class PostMapping {
             netReq.setResponseText(new ResponseText(answer));//write actual ressponse if netRequest
             }
 
-        /*
-cdvdfavdfada
 
-        xcv
-        xzc
-                vzxc
-          */
-                v
+
     }//mapping
 
 

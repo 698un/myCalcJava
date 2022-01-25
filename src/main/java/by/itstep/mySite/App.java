@@ -15,6 +15,7 @@ import java.util.Map;
 public class App {
 
     public static String appPath;
+
     public static void main(String[] args) {
 
         appPath = System.getProperty("user.dir");
@@ -29,8 +30,6 @@ public class App {
         //ControlConsole.main(arg);
 
         CalcOptions opt = CalcOptions.getOptions();
-
-
 
 
         //Запуск WEb контроллера
