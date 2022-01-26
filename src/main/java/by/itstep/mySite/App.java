@@ -1,6 +1,8 @@
 package by.itstep.mySite;
 
-
+/**
+ * This is start file to myCalc project
+ */
 
 
 import by.itstep.mySite.control.net.ControlNet;
