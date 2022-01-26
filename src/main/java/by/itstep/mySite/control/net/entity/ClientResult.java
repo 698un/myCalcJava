@@ -78,7 +78,7 @@ public class ClientResult {
         int pixelCountInLine =byteCountInLine/3/3;
 
         //if length of resultat not equals width of the image
-        if (pixelCountInLine!= CalcOptions.getOptions().getImageWidth()) throw new Exception ("Error line width");
+        if (pixelCountInLine!= CalcOptions.getOptions().getImageWidth()) throw new Exception ("Error line width("+pixelCountInLine+")");
 
         this.pixelArray = new short[byteCountInLine];
         int index;

@@ -4,7 +4,7 @@ import by.itstep.mySite.dao.model.enums.StatusPixelLine;
 import by.itstep.mySite.dao.repository.MyImageSave;
 import by.itstep.mySite.service.CalcException;
 import by.itstep.mySite.utilits.MyLocker;
-import by.itstep.mySite.utilits.loger.Loger;
+//import by.itstep.mySite.utilits.loger.Loger;
 
 public class MyImage implements iMyImage {
 

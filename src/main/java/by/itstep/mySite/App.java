@@ -8,15 +8,21 @@ package by.itstep.mySite;
 import by.itstep.mySite.control.net.ControlNet;
 import by.itstep.mySite.dao.model.Client;
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.loger.MyLogger;
+import by.itstep.mySite.utilits.loger.MyLoggerState;
 
 import java.io.File;
 import java.sql.SQLOutput;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class App {
 
     public static String appPath;
+
 
     public static void main(String[] args) {
 
@@ -26,12 +32,26 @@ public class App {
                 appPath
                 );
 
+        //Date date = new Date();
+
+        long dateInt = LocalDate.now().getYear()*10000+
+                       LocalDate.now().getMonthValue()*100+
+                       LocalDate.now().getDayOfMonth();
+
+
+
+        System.out.println(dateInt);
+
+
+
+        MyLogger.getLogger().log(MyLoggerState.ALL,  "testMessage");
+
         String[] arg = {"8091","---"};
 
         //запуск управления с консоли
         //ControlConsole.main(arg);
 
-        CalcOptions opt = CalcOptions.getOptions();
+        //CalcOptions opt = CalcOptions.getOptions();
 
 
         //Запуск WEb контроллера

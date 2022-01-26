@@ -110,7 +110,7 @@ public class NetRequest {
                 }
 
            // System.out.println("!!!length:"+bytesCount);
-           // System.out.println(new String(buffer,0,bytesCount));
+            System.out.println(new String(buffer,0,bytesCount));
 
             }//while input read not complete
 

@@ -64,11 +64,13 @@ public class ControlCalculate {
         try {
 
             if (netReq.getBodyString()==null) {
-                return "{\"duration\":-1000}";
-                //throw new Exception ("Null data in body");
+
+
+                //return "{\"duration\":-1000}";
+                throw new Exception ("Null data in body");
                 }
 
-
+            //Object of pixelLine from request
             ClientResult thisResult= new ClientResult(netReq);
 
             TaskService tskService = TaskService.getService();

@@ -152,7 +152,9 @@ function cmdUnJoinClick(){
 
 
            }
-    //alert(s1);
+
+
+    alert(s1);
     let respJSON = JSON.parse(s1);//весь ответ как json объект
 
     //extract error message from response
