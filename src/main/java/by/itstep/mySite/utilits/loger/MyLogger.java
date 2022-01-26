@@ -3,7 +3,9 @@ package by.itstep.mySite.utilits.loger;
 
 import by.itstep.mySite.utilits.CalcOptions;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.Reader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,7 +16,7 @@ public class MyLogger {
 
 
     private String folderPath;    //path to folder "log"
-    private String nowFolderPath; //path to folder "log/date"
+    private String nowFilePath; //path to folder "log/date"
     private long dayNow=-1L;//date in stringToInt format(YYYYMMDD), value inposible that necesalary reCalculate in first time
 
     private long dayNowTemp;
@@ -35,16 +37,20 @@ public class MyLogger {
                               message;
 
         if (logState.ordinal()<=levelShow.ordinal()) System.out.println(recordString);
-
-        if (logState.ordinal()<=levelWrite.ordinal()) System.out.println(recordString);
-
+        if (logState.ordinal()<=levelWrite.ordinal()) writeRecord(recordString);
         }//log
 
 
 
     public void writeRecord(String record){
 
-
+        try {
+            FileWriter writer = new FileWriter(nowFilePath, true);
+            BufferedWriter bufferWriter = new BufferedWriter(writer);
+            bufferWriter.write(record);
+            bufferWriter.write("\n");
+            bufferWriter.close();
+            } catch (Exception e) {e.printStackTrace();}
 
 
         }//writeRecord
@@ -67,16 +73,19 @@ public class MyLogger {
         //if date is change then reDefined path to logFolder
         if (dayNowTemp!=dayNow) {
                 dayNow = dayNowTemp;
-                nowFolderPath=folderPath +
-                              LocalDate.now().getYear()+"-"+LocalDate.now().getMonthValue()+"-"+LocalDate.now().getDayOfMonth();//+
-                              //File.separator;
+                nowFilePath=folderPath +
+                            LocalDate.now().getYear()+"-"+LocalDate.now().getMonthValue()+"-"+LocalDate.now().getDayOfMonth()+
+                            ".log";
 
-                System.out.println(nowFolderPath);
+                //System.out.println(nowFilePath);
 
                 //search folder on the disc
-                new File(nowFolderPath).mkdir();
+                File fileLog = new File(nowFilePath);
+                if (!fileLog.exists()) {
+                        try{fileLog.createNewFile();}catch (Exception e){e.printStackTrace();};
+                        }
 
-                System.out.println("ok");
+                //System.out.println("ok");
 
 
 
