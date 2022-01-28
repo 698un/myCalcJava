@@ -15,7 +15,7 @@ public class App {
 
 
     public static void main(String[] args) {
-
+        //this
         appPath = System.getProperty("user.dir");
 
         System.out.println("Папка программы: "+
