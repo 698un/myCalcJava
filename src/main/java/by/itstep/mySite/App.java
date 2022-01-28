@@ -27,7 +27,7 @@ public class App {
         MyLogger.getLogger().setFileLevel(LogState.ALL);
         MyLogger.getLogger().setShowLevel(LogState.ALL);
 
-        MyLogger.getLogger().log(LogState.ALL,  "testMessage");
+        MyLogger.getLogger().log(LogState.INFO,  "Start service");
 
         String[] arg = {"8091","---"};
 

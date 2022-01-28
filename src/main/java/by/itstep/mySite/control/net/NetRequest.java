@@ -85,10 +85,8 @@ public class NetRequest {
         if (bytesCount<=0) return;
 
 
-        //if (input.available()>0) throw new Exception("NOT_ALL BYTES READING");
-        //buffer = input.readAllBytes();
 
-
+        //updat read data from request
         while (input.available()>0) {
             //read add array
             byte[] addBuffer = new byte[1024*1024];
@@ -110,7 +108,7 @@ public class NetRequest {
                 }
 
            // System.out.println("!!!length:"+bytesCount);
-            System.out.println(new String(buffer,0,bytesCount));
+           // System.out.println(new String(buffer,0,bytesCount));
 
             }//while input read not complete
 
@@ -162,8 +160,16 @@ public class NetRequest {
      *  @return null if body not found
      */
     private String defineBodyString(){
+
+        //Search sign of begin body in request
         int indexBody = this.contentString.indexOf("\n\r");
-        if (indexBody<=0) return null;
+        if (indexBody<=0) {
+            indexBody = this.contentString.indexOf("\n\n");
+            if (indexBody<=0) return null;
+            }
+
+
+
 
         String body = this.contentString.substring(indexBody+3);
         if (body!=null && body.length()==0) return null;

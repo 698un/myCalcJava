@@ -5,6 +5,7 @@ package by.itstep.mySite.utilits.loger;
 
 
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.MyLocker;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -67,13 +68,20 @@ public class MyLogger {
 
     public void writeRecord(String record){
 
-        try {
-            FileWriter writer = new FileWriter(nowFilePath, true);
-            BufferedWriter bufferWriter = new BufferedWriter(writer);
-            bufferWriter.write(record);
-            bufferWriter.write("\n");
-            bufferWriter.close();
-            } catch (Exception e) {e.printStackTrace();}
+        //synchronize access to log file
+        synchronized (MyLocker.getLocker()) {
+
+            try {
+                FileWriter writer = new FileWriter(nowFilePath, true);
+                BufferedWriter bufferWriter = new BufferedWriter(writer);
+                bufferWriter.write(record);
+                bufferWriter.write("\n");
+                bufferWriter.close();
+            } catch (Exception e) {
+                   e.printStackTrace();
+                    }
+
+            }//synchronized
 
         }//writeRecord
 

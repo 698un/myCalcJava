@@ -37,7 +37,7 @@ import java.net.Socket;
             //объек запроса для удобства работы
             NetRequest netRequest = new NetRequest(input);//преобразование в объект запроса
 
-            System.out.println(netRequest.getContent());
+            //System.out.println(netRequest.getContent());
 
             GetMapping.mapping(netRequest);
             DeleteMapping.mapping(netRequest);
