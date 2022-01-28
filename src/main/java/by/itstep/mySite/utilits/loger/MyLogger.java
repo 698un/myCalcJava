@@ -26,10 +26,28 @@ public class MyLogger {
 
 
     private MyLoggerState levelShow = MyLoggerState.ALL;
-    private MyLoggerState levelWrite= MyLoggerState.ALL;;
+    private MyLoggerState levelFile= MyLoggerState.ALL;;
+
+    /**
+     * method set minimal level for event that write on file
+     * @param state
+     */
+    public void setFileLevel(MyLoggerState state){
+        this.levelFile = state;
+        }
+    /**
+     * method set minimal level for event that write on screen
+     * @param state
+     */
+
+    public void setShowLevel(MyLoggerState state){
+        this.levelShow = state;
+        }
+
 
     /**
      * This method construction record for write to display or to file
+     * and send this record on screen and logFile
      */
     public void log(MyLoggerState logState,
                     String message ){
@@ -40,7 +58,7 @@ public class MyLogger {
                               message;
 
         if (logState.ordinal()<=levelShow.ordinal()) System.out.println(recordString);
-        if (logState.ordinal()<=levelWrite.ordinal()) writeRecord(recordString);
+        if (logState.ordinal()<=levelFile.ordinal()) writeRecord(recordString);
         }//log
 
 
@@ -63,7 +81,7 @@ public class MyLogger {
     /**
      * This method reDefined dateFileName
       */
-    private void fileNAmeChange(){
+    private void fileNameChange(){
 
         //defined current date in long representation "YYYYMMDD"
         dayNowTemp = LocalDate.now().getYear()*10000+
@@ -81,11 +99,11 @@ public class MyLogger {
                 String dateString= String.valueOf(dayNow);
 
                 //Create fileName for "YYYY-MM-DD.log"
-                String fileName = dateString.substring(0,3)+
+                String fileName = dateString.substring(0,4)+
                                   "-"+
-                                  dateString.substring(4,5)+
+                                  dateString.substring(4,6)+
                                   "-"+
-                                  dateString.substring(6,7)+
+                                  dateString.substring(6)+
                                   ".log";
 
                 nowFilePath=folderPath +fileName;

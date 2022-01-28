@@ -34,15 +34,8 @@ public class App {
 
         //Date date = new Date();
 
-        long dateInt = LocalDate.now().getYear()*10000+
-                       LocalDate.now().getMonthValue()*100+
-                       LocalDate.now().getDayOfMonth();
-
-
-
-        System.out.println(dateInt);
-
-
+        MyLogger.getLogger().setFileLevel(MyLoggerState.ALL);
+        MyLogger.getLogger().setShowLevel(MyLoggerState.ALL);
 
         MyLogger.getLogger().log(MyLoggerState.ALL,  "testMessage");
 
