@@ -1,3 +1,6 @@
+/**
+ * 2022-01-28  Correct filename of log file
+ */
 package by.itstep.mySite.utilits.loger;
 
 
@@ -52,16 +55,15 @@ public class MyLogger {
             bufferWriter.close();
             } catch (Exception e) {e.printStackTrace();}
 
-
         }//writeRecord
 
 
 
 
     /**
-     * This method reDefined datefolder
+     * This method reDefined dateFileName
       */
-    private void dateFolderChange(){
+    private void fileNAmeChange(){
 
         //defined current date in long representation "YYYYMMDD"
         dayNowTemp = LocalDate.now().getYear()*10000+
@@ -70,23 +72,33 @@ public class MyLogger {
 
         System.out.println("dayNowTemp:"+dayNowTemp);
 
-        //if date is change then reDefined path to logFolder
+        //if date is change then reDefined path to logFile
         if (dayNowTemp!=dayNow) {
+
+
                 dayNow = dayNowTemp;
-                nowFilePath=folderPath +
-                            LocalDate.now().getYear()+"-"+LocalDate.now().getMonthValue()+"-"+LocalDate.now().getDayOfMonth()+
-                            ".log";
+
+                String dateString= String.valueOf(dayNow);
+
+                //Create fileName for "YYYY-MM-DD.log"
+                String fileName = dateString.substring(0,3)+
+                                  "-"+
+                                  dateString.substring(4,5)+
+                                  "-"+
+                                  dateString.substring(6,7)+
+                                  ".log";
+
+                nowFilePath=folderPath +fileName;
+
 
                 //System.out.println(nowFilePath);
 
                 //search folder on the disc
+                //create new file of log id not exist this file
                 File fileLog = new File(nowFilePath);
                 if (!fileLog.exists()) {
                         try{fileLog.createNewFile();}catch (Exception e){e.printStackTrace();};
                         }
-
-                //System.out.println("ok");
-
 
 
                 }//if day is change
@@ -114,8 +126,8 @@ public class MyLogger {
     public static MyLogger getLogger(){
         if (singleLogger==null) singleLogger = new MyLogger();
 
-        //defined folder by date
-        singleLogger.dateFolderChange();
+        //defined fileName by date
+        singleLogger.fileNameChange();
 
         return singleLogger;
         }
