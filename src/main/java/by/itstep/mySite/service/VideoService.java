@@ -1,6 +1,8 @@
 package by.itstep.mySite.service;
 
 import by.itstep.mySite.dao.repository.VideoRepository;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -28,7 +30,7 @@ public class VideoService {
     public ArrayList getVideoList()throws Exception {
         try {
             return VideoRepository.getRepository().getVideoList();
-             } catch (Exception e) {throw new Exception(e.getMessage());}
+            } catch (Exception e) {throw new Exception(e.getMessage());}
 
         }//getVideoList
 
@@ -52,11 +54,8 @@ public class VideoService {
 
     //приватный конструктор
     private VideoService(){
-            //imageRep = ImageRepository.getRepository();
-            }//приватный конструктор
-
-
-
+        MyLogger.getLogger().log(LogState.INFO,"Init video service");
+        }//приватный конструктор
 
 
 }//VideoService

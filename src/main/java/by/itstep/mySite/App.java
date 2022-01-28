@@ -6,18 +6,8 @@ package by.itstep.mySite;
 
 
 import by.itstep.mySite.control.net.ControlNet;
-import by.itstep.mySite.dao.model.Client;
-import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.loger.LogState;
 import by.itstep.mySite.utilits.loger.MyLogger;
-import by.itstep.mySite.utilits.loger.MyLoggerState;
-
-import java.io.File;
-import java.sql.SQLOutput;
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Logger;
 
 public class App {
 
@@ -32,12 +22,12 @@ public class App {
                 appPath
                 );
 
-        //Date date = new Date();
 
-        MyLogger.getLogger().setFileLevel(MyLoggerState.ALL);
-        MyLogger.getLogger().setShowLevel(MyLoggerState.ALL);
+        //set levels for registry events
+        MyLogger.getLogger().setFileLevel(LogState.ALL);
+        MyLogger.getLogger().setShowLevel(LogState.ALL);
 
-        MyLogger.getLogger().log(MyLoggerState.ALL,  "testMessage");
+        MyLogger.getLogger().log(LogState.ALL,  "testMessage");
 
         String[] arg = {"8091","---"};
 

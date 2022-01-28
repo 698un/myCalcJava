@@ -25,14 +25,14 @@ public class MyLogger {
     private long dayNowTemp;
 
 
-    private MyLoggerState levelShow = MyLoggerState.ALL;
-    private MyLoggerState levelFile= MyLoggerState.ALL;;
+    private LogState levelShow = LogState.ALL;
+    private LogState levelFile= LogState.ALL;;
 
     /**
      * method set minimal level for event that write on file
      * @param state
      */
-    public void setFileLevel(MyLoggerState state){
+    public void setFileLevel(LogState state){
         this.levelFile = state;
         }
     /**
@@ -40,16 +40,18 @@ public class MyLogger {
      * @param state
      */
 
-    public void setShowLevel(MyLoggerState state){
+    public void setShowLevel(LogState state){
         this.levelShow = state;
         }
+
+
 
 
     /**
      * This method construction record for write to display or to file
      * and send this record on screen and logFile
      */
-    public void log(MyLoggerState logState,
+    public void log(LogState logState,
                     String message ){
 
         String recordString = "["+logState+"]\t"+
