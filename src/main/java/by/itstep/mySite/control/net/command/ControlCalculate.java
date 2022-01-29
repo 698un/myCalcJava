@@ -16,6 +16,8 @@ import by.itstep.mySite.service.AcceptException;
 import by.itstep.mySite.dao.model.PixelLine;
 import by.itstep.mySite.service.ClientService;
 import by.itstep.mySite.service.TaskService;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 public class ControlCalculate {
 
@@ -24,8 +26,10 @@ public class ControlCalculate {
     public static String getNewTask(NetRequest netReq) throws Exception{
 
         //Verify regictration this client
-        if (false== ClientService.getService().inRepository(netReq.getClientKey()))
+        if (false== ClientService.getService().inRepository(netReq.getClientKey())) {
+            MyLogger.getLogger().log(LogState.WARN,"Wrong user gets task");
             throw new Exception("Client is not actual");
+            }
 
 
         try {
@@ -42,14 +46,15 @@ public class ControlCalculate {
             sb1.append("\"line\":"  + pixLine.getLineNumber());
             sb1.append("}");
 
-            System.out.println("newTask :" + sb1+" to client:"+netReq.getClientKey());
+
+            MyLogger.getLogger().log(LogState.DEBUG,"Client:"+netReq.getClientKey()+" get task:"+sb1);
+
             return sb1.toString();
 
         } catch (Exception e) {
+            MyLogger.getLogger().log(LogState.ERROR,"Client:"+netReq.getClientKey()+" getTask ERROR");
             throw new Exception(e.getMessage());
-            //e.printStackTrace();
-            //return "{\"errorStr\":\"NONETASK\"}";
-             }
+            }
 
     }//getClientKey
 
@@ -57,16 +62,17 @@ public class ControlCalculate {
 
         netReq.setRequestType(RequestType.WebData);
         //Verify regictration this client
-        if (false== ClientService.getService().inRepository(netReq.getClientKey()))
+        if (false== ClientService.getService().inRepository(netReq.getClientKey())) {
+            MyLogger.getLogger().log(LogState.WARN, "Expired client:"+netReq.getClientKey()+" getTask ERROR");
             throw new Exception("Client is not actual");
+            }
 
         Long calcTime;//time of the full cicle of calculation the pixelLine
         try {
 
             if (netReq.getBodyString()==null) {
 
-
-                //return "{\"duration\":-1000}";
+                MyLogger.getLogger().log(LogState.WARN, netReq.getClientKey()+" send null result");
                 throw new Exception ("Null data in body");
                 }
 
@@ -95,14 +101,15 @@ public class ControlCalculate {
             sb1.append("\"duration\":"+Long.toString(calcTime));
             sb1.append("}");
 
-            //System.out.println("response:"+sb1);
 
+            MyLogger.getLogger().log(LogState.DEBUG, "Duration of the task of the "+netReq.getClientKey()+":"+calcTime);
             return sb1.toString();
 
             //e.printStackTrace();
             } catch (Exception e) {
+                MyLogger.getLogger().log(LogState.ERROR, "Error post result from "+netReq.getClientKey());
                 throw new Exception(e.getMessage());
-                 }
+                }
 
     }//PostResultatLine
 

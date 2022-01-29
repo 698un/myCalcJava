@@ -13,6 +13,8 @@ import by.itstep.mySite.service.AcceptException;
 
 import by.itstep.mySite.service.ClientService;
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 public class ControlClient {
 
@@ -33,10 +35,12 @@ public class ControlClient {
             sb1.append("\"ClientKey\":\"" + clientKey + "\"");
             sb1.append("}");
 
-            //System.out.println("New client:" + clientKey);
+            MyLogger.getLogger().log(LogState.INFO,"Add new client. ClientKey:"+clientKey);
+
             return sb1.toString();
 
             } catch (Exception e) {
+                MyLogger.getLogger().log(LogState.ERROR,"Error add new client.");
                 throw new Exception("error registration");
                 }
 
@@ -57,6 +61,7 @@ public class ControlClient {
 
             //Если это ключ администратора
             if (netReq.getUserRole()== UserRole.ROOT) {
+                MyLogger.getLogger().log(LogState.INFO,"root disconnected from server");
                 CalcOptions.getOptions().getNewRootKey(CalcOptions.getOptions().getStr("rootPassword"));
                 return "OK";
                 }
@@ -64,6 +69,7 @@ public class ControlClient {
 
             //если это ключ клиента
             ClientService clientService = ClientService.getService();
+            MyLogger.getLogger().log(LogState.INFO,"Client "+netReq.getClientKey()+"leave from calculation");
             clientService.leaveClientByKey(netReq.getClientKey());
             return "OK";
 
@@ -87,7 +93,7 @@ public class ControlClient {
 
         try {
 
-            ClientService clientService = ClientService.getService();
+
 
             //define password from body of the request
             String reqPassword = netReq.getBodyString();
@@ -99,7 +105,7 @@ public class ControlClient {
             sb1.append("\"ClientKey\":\"" + clientKey + "\"");
             sb1.append("}");
 
-
+            MyLogger.getLogger().log(LogState.INFO,"root connected to server");
             return sb1.toString();
 
             } catch (Exception e) {

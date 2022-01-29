@@ -26,7 +26,7 @@ public class GetMapping {
         if (netReq.getHttpType()!= HttpType.GET) return;
 
         //Mark last time connect this Client
-        //ClientService.getService().updateLastTimeConnect(netReq.getClientKey());
+        ClientService.getService().updateLastTimeConnect(netReq.getClientKey());
 
         //url request and response
         String urlString = netReq.getUrlString();

@@ -55,11 +55,21 @@ public class MyLogger {
     public void log(LogState logState,
                     String message ){
 
+        //defined name of caller Class
+        String callerClassName = new Exception().getStackTrace()[1].getClassName();
+        int indexDot = callerClassName.lastIndexOf(".");
+        if  (indexDot>=-1) {
+            callerClassName = callerClassName.substring(indexDot+1);
+            }
+
+        //construction log record
         String recordString = "["+logState+"]\t"+
                               LocalDate.now()+" "+
                               LocalTime.now()+"\t"+
+                              callerClassName+"\t"+
                               message;
 
+        //send log record to report
         if (logState.ordinal()<=levelShow.ordinal()) System.out.println(recordString);
         if (logState.ordinal()<=levelFile.ordinal()) writeRecord(recordString);
         }//log
@@ -82,11 +92,7 @@ public class MyLogger {
                     }
 
             }//synchronized
-
         }//writeRecord
-
-
-
 
     /**
      * This method reDefined dateFileName
@@ -98,14 +104,10 @@ public class MyLogger {
                      LocalDate.now().getMonthValue()*100+
                      LocalDate.now().getDayOfMonth();
 
-        System.out.println("dayNowTemp:"+dayNowTemp);
-
         //if date is change then reDefined path to logFile
         if (dayNowTemp!=dayNow) {
 
-
                 dayNow = dayNowTemp;
-
                 String dateString= String.valueOf(dayNow);
 
                 //Create fileName for "YYYY-MM-DD.log"
@@ -116,24 +118,17 @@ public class MyLogger {
                                   dateString.substring(6)+
                                   ".log";
 
+                //construct filname for logFile
                 nowFilePath=folderPath +fileName;
 
-
-                //System.out.println(nowFilePath);
-
-                //search folder on the disc
-                //create new file of log id not exist this file
+                //search file on the disc
+                //create new file of log if this file is not exist
                 File fileLog = new File(nowFilePath);
                 if (!fileLog.exists()) {
                         try{fileLog.createNewFile();}catch (Exception e){e.printStackTrace();};
                         }
-
-
                 }//if day is change
-
-
-        }//folderChange
-
+        }//fileNameChange
 
 
     //system methods========================================================
