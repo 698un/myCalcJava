@@ -137,7 +137,7 @@ public class MyLogger {
     //private constructor
     private MyLogger() {
         //defined folder for logs;
-        folderPath = CalcOptions.getOptions().getApplicationPath() +
+        folderPath = System.getProperty("user.dir")+
                 File.separator +
                 "log" +
                 File.separator;
@@ -149,11 +149,10 @@ public class MyLogger {
     public static MyLogger getLogger(){
         if (singleLogger==null) singleLogger = new MyLogger();
 
-        //defined fileName by date
+        //verify actual filName for log file by date
         singleLogger.fileNameChange();
 
         return singleLogger;
         }
 
-}//class loger
-
+    }//class loger

@@ -146,6 +146,8 @@ public class CalcOptions {
 
         File fileConfig = new File(appPath+ File.separator+"config.ini");
 
+        System.out.println(appPath+ File.separator+"config.ini");
+
 
         try {
             Scanner scanner = new Scanner(fileConfig);
@@ -186,13 +188,10 @@ public class CalcOptions {
      */
     public static void setNull(){ singleOptions = null; }
 
-
-
-
     public static CalcOptions getOptions(){
         if (singleOptions==null) singleOptions = new CalcOptions();
         return singleOptions;
-    }//getOptions
+        }//getOptions
 
 
     private CalcOptions (){
@@ -201,9 +200,6 @@ public class CalcOptions {
 
         this.fieldToProperties();//set properties from hashMap
         this.rootKey = getRandomKey(10);
-    }//constructor
+        }//constructor
 
-
-
-
-}//CalcOptions
+    }//CalcOptions
