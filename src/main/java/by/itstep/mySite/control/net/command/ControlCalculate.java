@@ -77,7 +77,7 @@ public class ControlCalculate {
                 }
 
             //Object of pixelLine from request
-            ClientResult thisResult= new ClientResult(netReq);
+            ClientResult thisResult= ClientResult.getClientResult(netReq);
 
             TaskService tskService = TaskService.getService();
 

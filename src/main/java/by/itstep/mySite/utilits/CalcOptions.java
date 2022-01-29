@@ -1,6 +1,9 @@
 package by.itstep.mySite.utilits;
 
 
+ import by.itstep.mySite.utilits.loger.LogState;
+ import by.itstep.mySite.utilits.loger.MyLogger;
+
  import java.io.File;
  import java.io.IOException;
  import java.util.HashMap;
@@ -87,7 +90,6 @@ public class CalcOptions {
 
     public String getCurrentRootKey(){
         return this.rootKey;
-
         }
 
     /**
@@ -161,18 +163,16 @@ public class CalcOptions {
                 keyStr  = lineString.substring(0,limitIndex);
                 valStr  = lineString.substring(limitIndex+1);
 
-                //System.out.println(keyStr+"#"+valStr);
-
                 this.set(keyStr,valStr);
-
-
-
-                }
+                }//While file not end
 
             scanner.close();
-        } catch (IOException e) {e.printStackTrace();}
+        } catch (IOException e) {
+            MyLogger.getLogger().log(LogState.ERROR,"ERROR CONFIG "+e.getMessage());
+            e.printStackTrace();
+            }
 
-        System.out.println("Read complette." );
+        MyLogger.getLogger().log(LogState.DEBUG,"Config file is reading");
 
         }
 

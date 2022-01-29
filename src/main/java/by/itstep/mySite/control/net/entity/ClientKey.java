@@ -1,6 +1,8 @@
 package by.itstep.mySite.control.net.entity;
 
 import by.itstep.mySite.control.net.NetRequest;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 /**This class is clientKey for Identify every client
  *
@@ -45,8 +47,10 @@ public class ClientKey {
 
             //by any exception set clientKey=none
             } catch (Exception e) {
+                MyLogger.getLogger().log(LogState.INFO,"ClientKey not find in request");
                 e.printStackTrace();
-                result = "none";}
+                result = "none";
+                }
 
 
         return result;

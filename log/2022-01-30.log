@@ -3304,3 +3304,4 @@
 [INFO]	2022-01-30 00:52:47.888	ControlClient	root connected to server
 [INFO]	2022-01-30 00:52:51.388	VideoService	Init video service
 [INFO]	2022-01-30 00:53:00.985	ControlVideo	Create video: myvideo1.mp4
+[INFO]	2022-01-30 01:18:40.480	App	Start service

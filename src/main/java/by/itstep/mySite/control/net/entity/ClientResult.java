@@ -4,6 +4,9 @@ import by.itstep.mySite.control.net.NetRequest;
 import by.itstep.mySite.control.net.enums.*;
 import by.itstep.mySite.utilits.CalcOptions;
 
+/**
+ * This class defined resultat of task in the request
+ */
 public class ClientResult {
 
 
@@ -12,7 +15,6 @@ public class ClientResult {
     private String sceneKey;//key of the scene (this in the case for a scene change)
 
     private short[] pixelArray;// array values of pixels in current line
-
 
     public void setFrameNum(int inpFrameNum){ this.frameNum = inpFrameNum;  }
     public int getFrameNum(){return this.frameNum; }
@@ -52,10 +54,8 @@ public class ClientResult {
         return false;
         }//if ClientResult
 
-
-
     //Constructor
-    public ClientResult(NetRequest inpRequest) throws Exception{
+    private ClientResult(NetRequest inpRequest) throws Exception{
         String reqUrl = inpRequest.getUrlString();
         String reqBody = inpRequest.getBodyString();
 
