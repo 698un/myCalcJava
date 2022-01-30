@@ -15,7 +15,7 @@ public class App {
 
 
     public static void main(String[] args) {
-        //this log_records_4
+        //this log_to_file
         appPath = System.getProperty("user.dir");
 
         System.out.println("Папка программы: "+
@@ -24,8 +24,8 @@ public class App {
 
 
         //set levels for registry events
-        MyLogger.getLogger().setFileLevel(LogState.ALL);
-        MyLogger.getLogger().setShowLevel(LogState.ALL);
+
+
 
         MyLogger.getLogger().log(LogState.INFO,  "Start service");
 

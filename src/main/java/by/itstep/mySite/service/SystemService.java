@@ -6,6 +6,8 @@ import by.itstep.mySite.dao.model.PixelLine;
 import by.itstep.mySite.dao.repository.ImageRepository2;
 import by.itstep.mySite.dao.repository.VideoRepository;
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 public class SystemService {
 
@@ -27,8 +29,12 @@ public class SystemService {
         CalcOptions.getOptions().setNull();
         ImageRepository2.setNull();
         VideoRepository.setNull();
+        MyLogger.getLogger().log(LogState.INFO,"reset calculation");
+
         } catch (Exception e) {
-            throw new Exception(e.getMessage());}
+            MyLogger.getLogger().log(LogState.WARN,"reset error "+e.getMessage());
+            throw new Exception(e.getMessage());
+            }
 
        }//reset
 

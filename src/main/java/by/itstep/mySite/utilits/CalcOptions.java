@@ -64,12 +64,14 @@ public class CalcOptions {
         optList.put(name,String.valueOf(value));
     }
 
-    public String getStr(String name){
+    public String  getStr(String name){
         return optList.get(name);
     }
-    public int    getInt(String name){
-        return Integer.parseInt(optList.get(name));
+    public int     getInt(String name){
+        return   Integer.parseInt(optList.get(name));
         }
+    public boolean getBoolean(String name){return Boolean.parseBoolean(optList.get(name)); }
+
 
 
     /**
@@ -142,8 +144,6 @@ public class CalcOptions {
         //add properties ApplicationPath
         this.set("applicationPath",appPath);
 
-        //System.out.println(appPath);
-
         File fileConfig = new File(appPath+ File.separator+"config.ini");
 
         System.out.println(appPath+ File.separator+"config.ini");
@@ -170,11 +170,11 @@ public class CalcOptions {
 
             scanner.close();
         } catch (IOException e) {
-            MyLogger.getLogger().log(LogState.ERROR,"ERROR CONFIG "+e.getMessage());
+            //MyLogger.getLogger().log(LogState.ERROR,"ERROR CONFIG "+e.getMessage());
             e.printStackTrace();
             }
 
-        MyLogger.getLogger().log(LogState.DEBUG,"Config file is reading");
+        //MyLogger.getLogger().log(LogState.DEBUG,"Config file is reading");
 
         }
 

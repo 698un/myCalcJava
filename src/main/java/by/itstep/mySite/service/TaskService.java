@@ -6,6 +6,8 @@ import by.itstep.mySite.dao.repository.ClientRepositoryHM;
 import by.itstep.mySite.dao.repository.ImageRepository2;
 import by.itstep.mySite.utilits.CalcOptions;
 import by.itstep.mySite.utilits.MyLocker;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 public class TaskService {
 
@@ -46,13 +48,10 @@ public class TaskService {
                 }//synchronized
 
             } catch (Exception e) {
-                              // e.printStackTrace();
-                            throw new CalcException(e.getMessage());
-                            }
+                MyLogger.getLogger().log(LogState.WARN,e.getMessage());
+                throw new CalcException(e.getMessage());
+                }
         }//get New Task (PixelLine
-
-
-
 
     //===========================SYSTEM====METHODS===========================================
     private static TaskService singleService;//возвраащемый одиночный экземпляр
@@ -60,13 +59,13 @@ public class TaskService {
     public static TaskService getService(){
         if (singleService==null) singleService=new TaskService();
         return singleService;
-    }//getService
+        }//getService
 
     //приватный конструктор
     private TaskService(){
         this.lineLifeTime = CalcOptions.getOptions().getInt("lineLifeTime");
         //imageRep = ImageRepository.getRepository();
-    }//приватный конструктор
+        }//приватный конструктор
 
 
 

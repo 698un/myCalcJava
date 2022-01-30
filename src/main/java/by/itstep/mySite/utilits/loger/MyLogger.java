@@ -26,27 +26,17 @@ public class MyLogger {
     private long dayNowTemp;
 
 
-    private LogState levelShow = LogState.ALL;
-    private LogState levelFile= LogState.ALL;;
+    private LogState recordLevel = LogState.ALL;
+    private boolean logConsole  = false;
+
 
     /**
      * method set minimal level for event that write on file
      * @param state
      */
-    public void setFileLevel(LogState state){
-        this.levelFile = state;
+    public void setRecordLevel(LogState state){
+        this.recordLevel = state;
         }
-    /**
-     * method set minimal level for event that write on screen
-     * @param state
-     */
-
-    public void setShowLevel(LogState state){
-        this.levelShow = state;
-        }
-
-
-
 
     /**
      * This method construction record for write to display or to file
@@ -54,6 +44,9 @@ public class MyLogger {
      */
     public void log(LogState logState,
                     String message ){
+
+        //exit if level if hightes of recordLevel
+        if (logState.ordinal()>recordLevel.ordinal()) return;
 
         //defined name of caller Class
         String callerClassName = new Exception().getStackTrace()[1].getClassName();
@@ -69,9 +62,11 @@ public class MyLogger {
                               callerClassName+"\t"+
                               message;
 
-        //send log record to report
-        if (logState.ordinal()<=levelShow.ordinal()) System.out.println(recordString);
-        if (logState.ordinal()<=levelFile.ordinal()) writeRecord(recordString);
+
+        //send log record to file ond console
+        if (this.logConsole) System.out.println(recordString);
+        writeRecord(recordString);
+
         }//log
 
 
@@ -131,6 +126,7 @@ public class MyLogger {
         }//fileNameChange
 
 
+
     //system methods========================================================
     private static MyLogger singleLogger;
 
@@ -141,6 +137,14 @@ public class MyLogger {
                 File.separator +
                 "log" +
                 File.separator;
+
+        this.logConsole =CalcOptions.getOptions().getBoolean("logConsole");
+
+        //FATAL,ERROR,WARN,INFO,DEBUG,TRACE,ALL
+        this.recordLevel = LogState.valueOf(CalcOptions.getOptions().getStr("logLevel"));
+
+        System.out.println(recordLevel.toString());
+
         } //Constructor
 
 
