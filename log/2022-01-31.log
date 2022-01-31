@@ -1,0 +1,218 @@
+[INFO]	2022-01-31 18:23:25.661	App	Start service
+[INFO]	2022-01-31 18:23:57.174	ControlClient	Add new client. ClientKey:sxvwwuwbfd
+[DEBUG]	2022-01-31 18:23:58.813	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":0}
+[DEBUG]	2022-01-31 18:23:59.416	ControlCalculate	Duration of the task of the sxvwwuwbfd:609
+[DEBUG]	2022-01-31 18:23:59.432	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":1}
+[DEBUG]	2022-01-31 18:23:59.666	ControlCalculate	Duration of the task of the sxvwwuwbfd:234
+[DEBUG]	2022-01-31 18:23:59.682	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":2}
+[DEBUG]	2022-01-31 18:23:59.871	ControlCalculate	Duration of the task of the sxvwwuwbfd:189
+[DEBUG]	2022-01-31 18:23:59.887	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":3}
+[DEBUG]	2022-01-31 18:24:00.035	ControlCalculate	Duration of the task of the sxvwwuwbfd:148
+[DEBUG]	2022-01-31 18:24:00.051	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":4}
+[DEBUG]	2022-01-31 18:24:00.189	ControlCalculate	Duration of the task of the sxvwwuwbfd:138
+[DEBUG]	2022-01-31 18:24:00.204	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":5}
+[DEBUG]	2022-01-31 18:24:00.320	ControlCalculate	Duration of the task of the sxvwwuwbfd:117
+[DEBUG]	2022-01-31 18:24:00.335	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":6}
+[DEBUG]	2022-01-31 18:24:00.435	ControlCalculate	Duration of the task of the sxvwwuwbfd:99
+[DEBUG]	2022-01-31 18:24:00.458	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":7}
+[DEBUG]	2022-01-31 18:24:00.554	ControlCalculate	Duration of the task of the sxvwwuwbfd:96
+[DEBUG]	2022-01-31 18:24:00.570	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":8}
+[DEBUG]	2022-01-31 18:24:00.654	ControlCalculate	Duration of the task of the sxvwwuwbfd:84
+[DEBUG]	2022-01-31 18:24:00.674	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":9}
+[DEBUG]	2022-01-31 18:24:00.756	ControlCalculate	Duration of the task of the sxvwwuwbfd:82
+[DEBUG]	2022-01-31 18:24:00.770	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":10}
+[DEBUG]	2022-01-31 18:24:00.855	ControlCalculate	Duration of the task of the sxvwwuwbfd:84
+[DEBUG]	2022-01-31 18:24:00.872	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":11}
+[DEBUG]	2022-01-31 18:24:00.960	ControlCalculate	Duration of the task of the sxvwwuwbfd:89
+[DEBUG]	2022-01-31 18:24:00.973	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":12}
+[DEBUG]	2022-01-31 18:24:01.040	ControlCalculate	Duration of the task of the sxvwwuwbfd:67
+[DEBUG]	2022-01-31 18:24:01.057	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":13}
+[DEBUG]	2022-01-31 18:24:01.126	ControlCalculate	Duration of the task of the sxvwwuwbfd:69
+[DEBUG]	2022-01-31 18:24:01.139	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":14}
+[DEBUG]	2022-01-31 18:24:01.207	ControlCalculate	Duration of the task of the sxvwwuwbfd:67
+[DEBUG]	2022-01-31 18:24:01.221	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":15}
+[DEBUG]	2022-01-31 18:24:01.294	ControlCalculate	Duration of the task of the sxvwwuwbfd:72
+[DEBUG]	2022-01-31 18:24:01.306	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":16}
+[DEBUG]	2022-01-31 18:24:01.377	ControlCalculate	Duration of the task of the sxvwwuwbfd:71
+[DEBUG]	2022-01-31 18:24:01.389	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":17}
+[DEBUG]	2022-01-31 18:24:01.458	ControlCalculate	Duration of the task of the sxvwwuwbfd:69
+[DEBUG]	2022-01-31 18:24:01.473	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":18}
+[DEBUG]	2022-01-31 18:24:01.525	ControlCalculate	Duration of the task of the sxvwwuwbfd:53
+[DEBUG]	2022-01-31 18:24:01.538	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":19}
+[DEBUG]	2022-01-31 18:24:01.592	ControlCalculate	Duration of the task of the sxvwwuwbfd:53
+[DEBUG]	2022-01-31 18:24:01.609	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":20}
+[DEBUG]	2022-01-31 18:24:01.659	ControlCalculate	Duration of the task of the sxvwwuwbfd:49
+[DEBUG]	2022-01-31 18:24:01.675	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":21}
+[DEBUG]	2022-01-31 18:24:01.726	ControlCalculate	Duration of the task of the sxvwwuwbfd:51
+[DEBUG]	2022-01-31 18:24:01.744	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":22}
+[DEBUG]	2022-01-31 18:24:01.794	ControlCalculate	Duration of the task of the sxvwwuwbfd:50
+[DEBUG]	2022-01-31 18:24:01.808	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":23}
+[DEBUG]	2022-01-31 18:24:01.862	ControlCalculate	Duration of the task of the sxvwwuwbfd:55
+[DEBUG]	2022-01-31 18:24:01.875	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":24}
+[DEBUG]	2022-01-31 18:24:01.928	ControlCalculate	Duration of the task of the sxvwwuwbfd:54
+[DEBUG]	2022-01-31 18:24:01.945	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":25}
+[DEBUG]	2022-01-31 18:24:02.008	ControlCalculate	Duration of the task of the sxvwwuwbfd:63
+[DEBUG]	2022-01-31 18:24:02.030	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":26}
+[DEBUG]	2022-01-31 18:24:02.077	ControlCalculate	Duration of the task of the sxvwwuwbfd:48
+[DEBUG]	2022-01-31 18:24:02.091	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":27}
+[DEBUG]	2022-01-31 18:24:02.141	ControlCalculate	Duration of the task of the sxvwwuwbfd:51
+[DEBUG]	2022-01-31 18:24:02.157	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":28}
+[DEBUG]	2022-01-31 18:24:02.207	ControlCalculate	Duration of the task of the sxvwwuwbfd:50
+[DEBUG]	2022-01-31 18:24:02.224	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":29}
+[DEBUG]	2022-01-31 18:24:02.276	ControlCalculate	Duration of the task of the sxvwwuwbfd:52
+[DEBUG]	2022-01-31 18:24:02.293	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":30}
+[DEBUG]	2022-01-31 18:24:02.345	ControlCalculate	Duration of the task of the sxvwwuwbfd:53
+[DEBUG]	2022-01-31 18:24:02.359	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":31}
+[DEBUG]	2022-01-31 18:24:02.408	ControlCalculate	Duration of the task of the sxvwwuwbfd:49
+[DEBUG]	2022-01-31 18:24:02.425	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":32}
+[DEBUG]	2022-01-31 18:24:02.460	ControlCalculate	Duration of the task of the sxvwwuwbfd:34
+[DEBUG]	2022-01-31 18:24:02.476	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":33}
+[DEBUG]	2022-01-31 18:24:02.510	ControlCalculate	Duration of the task of the sxvwwuwbfd:33
+[DEBUG]	2022-01-31 18:24:02.525	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":34}
+[DEBUG]	2022-01-31 18:24:02.560	ControlCalculate	Duration of the task of the sxvwwuwbfd:35
+[DEBUG]	2022-01-31 18:24:02.575	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":35}
+[DEBUG]	2022-01-31 18:24:02.610	ControlCalculate	Duration of the task of the sxvwwuwbfd:35
+[DEBUG]	2022-01-31 18:24:02.626	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":36}
+[DEBUG]	2022-01-31 18:24:02.667	ControlCalculate	Duration of the task of the sxvwwuwbfd:41
+[DEBUG]	2022-01-31 18:24:02.691	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":37}
+[DEBUG]	2022-01-31 18:24:02.730	ControlCalculate	Duration of the task of the sxvwwuwbfd:43
+[DEBUG]	2022-01-31 18:24:02.745	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":38}
+[DEBUG]	2022-01-31 18:24:02.778	ControlCalculate	Duration of the task of the sxvwwuwbfd:32
+[DEBUG]	2022-01-31 18:24:02.794	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":39}
+[DEBUG]	2022-01-31 18:24:02.827	ControlCalculate	Duration of the task of the sxvwwuwbfd:33
+[DEBUG]	2022-01-31 18:24:02.853	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":40}
+[DEBUG]	2022-01-31 18:24:02.886	ControlCalculate	Duration of the task of the sxvwwuwbfd:32
+[DEBUG]	2022-01-31 18:24:02.904	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":41}
+[DEBUG]	2022-01-31 18:24:02.934	ControlCalculate	Duration of the task of the sxvwwuwbfd:30
+[DEBUG]	2022-01-31 18:24:02.947	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":42}
+[DEBUG]	2022-01-31 18:24:02.981	ControlCalculate	Duration of the task of the sxvwwuwbfd:34
+[DEBUG]	2022-01-31 18:24:02.998	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":43}
+[DEBUG]	2022-01-31 18:24:03.032	ControlCalculate	Duration of the task of the sxvwwuwbfd:34
+[DEBUG]	2022-01-31 18:24:03.050	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":44}
+[DEBUG]	2022-01-31 18:24:03.086	ControlCalculate	Duration of the task of the sxvwwuwbfd:36
+[DEBUG]	2022-01-31 18:24:03.102	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":45}
+[DEBUG]	2022-01-31 18:24:03.142	ControlCalculate	Duration of the task of the sxvwwuwbfd:39
+[DEBUG]	2022-01-31 18:24:03.157	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":46}
+[DEBUG]	2022-01-31 18:24:03.196	ControlCalculate	Duration of the task of the sxvwwuwbfd:39
+[DEBUG]	2022-01-31 18:24:03.213	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":47}
+[DEBUG]	2022-01-31 18:24:03.247	ControlCalculate	Duration of the task of the sxvwwuwbfd:35
+[DEBUG]	2022-01-31 18:24:03.262	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":48}
+[DEBUG]	2022-01-31 18:24:03.300	ControlCalculate	Duration of the task of the sxvwwuwbfd:38
+[DEBUG]	2022-01-31 18:24:03.318	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":49}
+[DEBUG]	2022-01-31 18:24:03.351	ControlCalculate	Duration of the task of the sxvwwuwbfd:33
+[DEBUG]	2022-01-31 18:24:03.366	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":50}
+[DEBUG]	2022-01-31 18:24:03.401	ControlCalculate	Duration of the task of the sxvwwuwbfd:35
+[DEBUG]	2022-01-31 18:24:03.416	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":51}
+[DEBUG]	2022-01-31 18:24:03.447	ControlCalculate	Duration of the task of the sxvwwuwbfd:31
+[DEBUG]	2022-01-31 18:24:03.463	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":52}
+[DEBUG]	2022-01-31 18:24:03.497	ControlCalculate	Duration of the task of the sxvwwuwbfd:34
+[DEBUG]	2022-01-31 18:24:03.515	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":53}
+[DEBUG]	2022-01-31 18:24:03.551	ControlCalculate	Duration of the task of the sxvwwuwbfd:36
+[DEBUG]	2022-01-31 18:24:03.567	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":54}
+[DEBUG]	2022-01-31 18:24:03.600	ControlCalculate	Duration of the task of the sxvwwuwbfd:33
+[DEBUG]	2022-01-31 18:24:03.616	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":55}
+[DEBUG]	2022-01-31 18:24:03.647	ControlCalculate	Duration of the task of the sxvwwuwbfd:31
+[DEBUG]	2022-01-31 18:24:03.664	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":56}
+[DEBUG]	2022-01-31 18:24:03.697	ControlCalculate	Duration of the task of the sxvwwuwbfd:33
+[DEBUG]	2022-01-31 18:24:03.714	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":57}
+[DEBUG]	2022-01-31 18:24:03.751	ControlCalculate	Duration of the task of the sxvwwuwbfd:37
+[DEBUG]	2022-01-31 18:24:03.771	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":58}
+[DEBUG]	2022-01-31 18:24:03.801	ControlCalculate	Duration of the task of the sxvwwuwbfd:30
+[DEBUG]	2022-01-31 18:24:03.818	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":59}
+[DEBUG]	2022-01-31 18:24:03.850	ControlCalculate	Duration of the task of the sxvwwuwbfd:32
+[DEBUG]	2022-01-31 18:24:03.866	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":60}
+[DEBUG]	2022-01-31 18:24:03.899	ControlCalculate	Duration of the task of the sxvwwuwbfd:33
+[DEBUG]	2022-01-31 18:24:03.915	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":61}
+[DEBUG]	2022-01-31 18:24:03.949	ControlCalculate	Duration of the task of the sxvwwuwbfd:34
+[DEBUG]	2022-01-31 18:24:03.968	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":62}
+[DEBUG]	2022-01-31 18:24:04.002	ControlCalculate	Duration of the task of the sxvwwuwbfd:34
+[DEBUG]	2022-01-31 18:24:04.019	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":63}
+[DEBUG]	2022-01-31 18:24:04.052	ControlCalculate	Duration of the task of the sxvwwuwbfd:33
+[DEBUG]	2022-01-31 18:24:04.069	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":64}
+[DEBUG]	2022-01-31 18:24:04.099	ControlCalculate	Duration of the task of the sxvwwuwbfd:30
+[DEBUG]	2022-01-31 18:24:04.117	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":65}
+[DEBUG]	2022-01-31 18:24:04.149	ControlCalculate	Duration of the task of the sxvwwuwbfd:32
+[DEBUG]	2022-01-31 18:24:04.166	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":66}
+[DEBUG]	2022-01-31 18:24:04.201	ControlCalculate	Duration of the task of the sxvwwuwbfd:35
+[DEBUG]	2022-01-31 18:24:04.220	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":67}
+[DEBUG]	2022-01-31 18:24:04.237	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.251	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":68}
+[DEBUG]	2022-01-31 18:24:04.270	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:04.283	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":69}
+[DEBUG]	2022-01-31 18:24:04.302	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:04.318	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":70}
+[DEBUG]	2022-01-31 18:24:04.335	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.351	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":71}
+[DEBUG]	2022-01-31 18:24:04.368	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.384	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":72}
+[DEBUG]	2022-01-31 18:24:04.401	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.418	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":73}
+[DEBUG]	2022-01-31 18:24:04.436	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:04.454	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":74}
+[DEBUG]	2022-01-31 18:24:04.472	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.486	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":75}
+[DEBUG]	2022-01-31 18:24:04.507	ControlCalculate	Duration of the task of the sxvwwuwbfd:21
+[DEBUG]	2022-01-31 18:24:04.522	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":76}
+[DEBUG]	2022-01-31 18:24:04.537	ControlCalculate	Duration of the task of the sxvwwuwbfd:15
+[DEBUG]	2022-01-31 18:24:04.552	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":77}
+[DEBUG]	2022-01-31 18:24:04.569	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.585	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":78}
+[DEBUG]	2022-01-31 18:24:04.602	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.618	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":79}
+[DEBUG]	2022-01-31 18:24:04.638	ControlCalculate	Duration of the task of the sxvwwuwbfd:20
+[DEBUG]	2022-01-31 18:24:04.655	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":80}
+[DEBUG]	2022-01-31 18:24:04.673	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.687	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":81}
+[DEBUG]	2022-01-31 18:24:04.706	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:04.722	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":82}
+[DEBUG]	2022-01-31 18:24:04.739	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.753	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":83}
+[DEBUG]	2022-01-31 18:24:04.770	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.786	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":84}
+[DEBUG]	2022-01-31 18:24:04.803	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.819	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":85}
+[DEBUG]	2022-01-31 18:24:04.836	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:04.857	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":86}
+[DEBUG]	2022-01-31 18:24:04.875	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:04.896	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":87}
+[DEBUG]	2022-01-31 18:24:04.915	ControlCalculate	Duration of the task of the sxvwwuwbfd:19
+[DEBUG]	2022-01-31 18:24:04.931	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":88}
+[DEBUG]	2022-01-31 18:24:04.950	ControlCalculate	Duration of the task of the sxvwwuwbfd:19
+[DEBUG]	2022-01-31 18:24:04.970	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":89}
+[DEBUG]	2022-01-31 18:24:04.987	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:05.003	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":90}
+[DEBUG]	2022-01-31 18:24:05.020	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:05.037	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":91}
+[DEBUG]	2022-01-31 18:24:05.054	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:05.072	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":92}
+[DEBUG]	2022-01-31 18:24:05.089	ControlCalculate	Duration of the task of the sxvwwuwbfd:16
+[DEBUG]	2022-01-31 18:24:05.108	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":93}
+[DEBUG]	2022-01-31 18:24:05.126	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:05.139	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":94}
+[DEBUG]	2022-01-31 18:24:05.159	ControlCalculate	Duration of the task of the sxvwwuwbfd:19
+[DEBUG]	2022-01-31 18:24:05.173	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":95}
+[DEBUG]	2022-01-31 18:24:05.189	ControlCalculate	Duration of the task of the sxvwwuwbfd:16
+[DEBUG]	2022-01-31 18:24:05.205	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":96}
+[DEBUG]	2022-01-31 18:24:05.222	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:05.239	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":97}
+[DEBUG]	2022-01-31 18:24:05.255	ControlCalculate	Duration of the task of the sxvwwuwbfd:16
+[DEBUG]	2022-01-31 18:24:05.271	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":98}
+[DEBUG]	2022-01-31 18:24:05.289	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:05.306	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":99}
+[DEBUG]	2022-01-31 18:24:05.325	ControlCalculate	Duration of the task of the sxvwwuwbfd:19
+[DEBUG]	2022-01-31 18:24:05.342	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":100}
+[DEBUG]	2022-01-31 18:24:05.360	ControlCalculate	Duration of the task of the sxvwwuwbfd:19
+[DEBUG]	2022-01-31 18:24:05.378	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":101}
+[DEBUG]	2022-01-31 18:24:05.396	ControlCalculate	Duration of the task of the sxvwwuwbfd:18
+[DEBUG]	2022-01-31 18:24:05.409	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":102}
+[DEBUG]	2022-01-31 18:24:05.426	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:05.443	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":103}
+[DEBUG]	2022-01-31 18:24:05.459	ControlCalculate	Duration of the task of the sxvwwuwbfd:17
+[DEBUG]	2022-01-31 18:24:05.475	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":104}
+[DEBUG]	2022-01-31 18:24:05.494	ControlCalculate	Duration of the task of the sxvwwuwbfd:19
+[DEBUG]	2022-01-31 18:24:05.510	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":105}
+[DEBUG]	2022-01-31 18:24:05.527	ControlCalculate	Duration of the task of the sxvwwuwbfd:16
+[DEBUG]	2022-01-31 18:24:05.543	ControlCalculate	Client:sxvwwuwbfd get task:{"sceneKey":"hkpywxnybnetvpinftfv","frame":0,"line":106}
+[INFO]	2022-01-31 18:24:05.557	ControlClient	Client sxvwwuwbfdleave from calculation
+[WARN]	2022-01-31 18:24:06.980	ControlCalculate	Expired client:sxvwwuwbfd getTask ERROR
+[WARN]	2022-01-31 18:24:06.999	ControlCalculate	Wrong user gets task
