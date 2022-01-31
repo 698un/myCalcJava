@@ -1,0 +1,1 @@
+java -cp myCalc-1.0-SNAPSHOT.jar by.itstep.mySite.App "21213"
