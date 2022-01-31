@@ -33,7 +33,7 @@ public class ClientResult {
      */
     public static ClientResult getClientResult(NetRequest netReq){
 
-        System.out.println(netReq.getUrlString());
+        //System.out.println(netReq.getUrlString());
         if (isClientResult(netReq)==false) return null;
         try {
             ClientResult res = new ClientResult(netReq);

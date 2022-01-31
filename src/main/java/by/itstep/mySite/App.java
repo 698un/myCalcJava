@@ -9,6 +9,8 @@ import by.itstep.mySite.control.net.ControlNet;
 import by.itstep.mySite.utilits.loger.LogState;
 import by.itstep.mySite.utilits.loger.MyLogger;
 
+import java.io.File;
+
 public class App {
 
     public static String appPath;
@@ -24,6 +26,19 @@ public class App {
 
 
         //set levels for registry events
+
+        /**
+        File testFile = new File("test.txt");
+        try {
+            testFile.createNewFile();
+            } catch (Exception e) {e.printStackTrace();};
+
+         */
+
+
+
+
+
 
 
 

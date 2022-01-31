@@ -26,7 +26,6 @@ public class CalcOptions {
     private int clientLifeTime;
     private int clientClearTime;
 
-
     //image properties
     private int fps;
     private int imageHeight;
@@ -71,8 +70,6 @@ public class CalcOptions {
         return   Integer.parseInt(optList.get(name));
         }
     public boolean getBoolean(String name){return Boolean.parseBoolean(optList.get(name)); }
-
-
 
     /**
      * This method generate random key
@@ -160,7 +157,7 @@ public class CalcOptions {
             while (scanner.hasNext()) {
 
                 lineString = scanner.next();
-                int limitIndex = lineString.indexOf(":");
+                int limitIndex = lineString.indexOf("=");
 
                 keyStr  = lineString.substring(0,limitIndex);
                 valStr  = lineString.substring(limitIndex+1);
@@ -175,6 +172,7 @@ public class CalcOptions {
             }
 
         //MyLogger.getLogger().log(LogState.DEBUG,"Config file is reading");
+
 
         }
 
