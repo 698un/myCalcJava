@@ -15,6 +15,8 @@ import by.itstep.mySite.service.AcceptException;
 import by.itstep.mySite.service.ClientService;
 import by.itstep.mySite.service.SystemService;
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 public class ControlServer {
 
@@ -61,6 +63,7 @@ public class ControlServer {
             //System.out.println("SERVER_STATUS:" + sb1);
 
             //netReq.setRequestType(RequestType.WebData);
+            MyLogger.getLogger().log(LogState.DEBUG,"Client "+netReq.getClientKey()+" ask server status...");
 
             return sb1.toString();
 

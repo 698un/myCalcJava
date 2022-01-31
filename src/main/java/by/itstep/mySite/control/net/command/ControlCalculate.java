@@ -101,8 +101,7 @@ public class ControlCalculate {
             sb1.append("\"duration\":"+Long.toString(calcTime));
             sb1.append("}");
 
-
-            MyLogger.getLogger().log(LogState.DEBUG, "Duration of the task of the "+netReq.getClientKey()+":"+calcTime);
+            MyLogger.getLogger().log(LogState.DEBUG,"Client:"+netReq.getClientKey()+" post resultat");
             return sb1.toString();
 
             //e.printStackTrace();

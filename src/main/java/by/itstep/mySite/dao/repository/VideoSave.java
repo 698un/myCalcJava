@@ -2,6 +2,9 @@ package by.itstep.mySite.dao.repository;
 
 import by.itstep.mySite.dao.model.VideoFile;
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -38,7 +41,7 @@ public class VideoSave extends Thread{
             // При открытии и сохранении файлов, может произойти неожиданный случай.
             // И на этот случай у нас try catch
             e.printStackTrace();
-            System.out.println("Файл не найден или не удалось сохранить");
+            MyLogger.getLogger().log(LogState.ERROR,"not started video create!!!");
 
         }
 
@@ -59,11 +62,13 @@ public class VideoSave extends Thread{
 
 
              } catch (IOException e) {
+                    MyLogger.getLogger().log(LogState.ERROR,"video create not starting");
                     throw new Exception(e.getMessage()) ;
                         }
 
         //mark in fileSystem that process is started
         VideoRepository.getRepository().videoSetUnComplette();
+        MyLogger.getLogger().log(LogState.INFO,"Start video create");
 
 
         }//launchBatFile

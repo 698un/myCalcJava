@@ -2,12 +2,16 @@ package by.itstep.mySite.dao.repository;
 import  by.itstep.mySite.dao.model.MyImage;
 import by.itstep.mySite.utilits.CalcOptions;
 import by.itstep.mySite.utilits.MyLocker;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 
 public class MyImageSave extends Thread{
@@ -27,8 +31,8 @@ public class MyImageSave extends Thread{
         //Load template format of the imageFile
         File file = new File(CalcOptions.getOptions().getApplicationPath()+
                              File.separator+
-                             "src"+
-                             File.separator+
+                             //"src"+
+                             //File.separator+
                              "null.png");
 
 
@@ -108,7 +112,8 @@ public class MyImageSave extends Thread{
 
 
         ImageIO.write(result, "png", output);
-        System.out.println("Сохранен :"+fileName);
+        //System.out.println("Сохранен :"+fileName);
+        MyLogger.getLogger().log(LogState.INFO,"Save image: "+fileName);
 
 
         image1.complette();
@@ -117,8 +122,16 @@ public class MyImageSave extends Thread{
 
             // При открытии и сохранении файлов, может произойти неожиданный случай.
             // И на этот случай у нас try catch
-            e.printStackTrace();
-            System.out.println("Файл не найден или не удалось сохранить");
+            //e.printStackTrace();
+
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            String sStackTrace = sw.toString(); // stack trace as a string
+            //System.out.println(sStackTrace);
+
+
+            MyLogger.getLogger().log(LogState.ERROR,sStackTrace);
 
             }
 
