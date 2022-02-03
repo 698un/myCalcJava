@@ -7,6 +7,8 @@ import by.itstep.mySite.control.net.entity.ResponseText;
 import by.itstep.mySite.control.net.mapping.DeleteMapping;
 import by.itstep.mySite.control.net.mapping.GetMapping;
 import by.itstep.mySite.control.net.mapping.PostMapping;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,17 +39,11 @@ import java.net.Socket;
             //объек запроса для удобства работы
             NetRequest netRequest = new NetRequest(input);//преобразование в объект запроса
 
-            //System.out.println(netRequest.getContent());
-
             GetMapping.mapping(netRequest);
             DeleteMapping.mapping(netRequest);
             PostMapping.mapping(netRequest);
 
-
-
-
-
-
+            //send answer by result of request
             switch (netRequest.getRequestType()) {
 
                 //if request webFile
@@ -97,7 +93,7 @@ import java.net.Socket;
             }//try
 
         catch (Exception e) {
-            System.out.println(e);
+            MyLogger.getLogger().log(LogState.FATAL,"ServerNotRun!!! "+e.getMessage());
             }
 
     }//main
