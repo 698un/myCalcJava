@@ -1,6 +1,7 @@
 package by.itstep.mySite.service;
 
 import by.itstep.mySite.dao.repository.ClientRepositoryHM;
+import by.itstep.mySite.utilits.CalcOptions;
 
 public class ClientService {
 
@@ -8,6 +9,10 @@ public class ClientService {
 
 
     public boolean inRepository(String inpClientKey){
+
+        //verifing root
+        if (CalcOptions.getOptions().getCurrentRootKey().equals((inpClientKey))) return true;
+
         return ClientRepositoryHM.getRepository().inRepository(inpClientKey);
         }
 

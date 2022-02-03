@@ -69,7 +69,7 @@ public class ControlClient {
 
             //если это ключ клиента
             ClientService clientService = ClientService.getService();
-            MyLogger.getLogger().log(LogState.INFO,"Client "+netReq.getClientKey()+"leave from calculation");
+            MyLogger.getLogger().log(LogState.INFO,"Client "+netReq.getClientKey()+" leave from calculation");
             clientService.leaveClientByKey(netReq.getClientKey());
             return "OK";
 

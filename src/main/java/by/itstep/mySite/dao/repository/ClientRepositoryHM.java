@@ -113,7 +113,7 @@ public class ClientRepositoryHM implements iClientRepository{
     @Override
     public boolean inRepository(String inpKey){
 
-        if (CalcOptions.getOptions().getCurrentRootKey().equals((inpKey))) return true;
+
 
 
         if (clientList.get(inpKey)==null)  return false;

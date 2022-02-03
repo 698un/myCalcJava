@@ -26,9 +26,10 @@ public class SystemService {
 
     public void reset()throws Exception{
         try{
-        CalcOptions.getOptions().setNull();
+        CalcOptions.setNull();
         ImageRepository2.setNull();
         VideoRepository.setNull();
+
         MyLogger.getLogger().log(LogState.INFO,"reset calculation");
 
         } catch (Exception e) {
