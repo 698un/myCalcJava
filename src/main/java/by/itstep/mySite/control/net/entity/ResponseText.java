@@ -42,10 +42,7 @@ public class ResponseText {
 
     public void sendResponse( OutputStream output){
 
-        //if (nreq.getResponse()==null) return;
 
-        // System.out.println("sendResponseText");
-        // System.out.println("sendResponseText");
         boolean error = false;//we assume that there are not error
         StringBuffer responseAll;//head and data of response
         int len;//=0;//length of responceData
@@ -58,8 +55,6 @@ public class ResponseText {
         //if error then body set errorString
         if (this.responseString==null) this.responseString = "error:"+this.errorMessage;
 
-
-
         //Calculate size of the Data of answer
         byte[] responseDataBytes = this.responseString.getBytes();
         len = responseDataBytes.length;
@@ -70,17 +65,11 @@ public class ResponseText {
         responseAll.append("Cache-Control: no-cache, no-store, must-revalidate"+"\n");//without cash
         responseAll.append("Connection: close\n");
 
-        //hier send clientKey in header
+        //hier send clientKey in header if client need
         if (this.responseString.indexOf("ClientKey")>=0) {
                 //SET COOKIE TO BROWSER OF CLIENT
                 String subClientKey = this.responseString.substring(14,responseString.indexOf("}")-1);
-
-                System.out.println("SET-COOKIE");
-                System.out.println(responseString);
-                System.out.println(subClientKey);
-
-
-               responseAll.append("Set-cookie: ClientKey="+subClientKey+ "\n");
+                responseAll.append("Set-cookie: ClientKey="+subClientKey+ "\n");
                 }
 
         //mark end of the Heding and begin data of the response

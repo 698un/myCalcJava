@@ -30,12 +30,18 @@ public class WebFile {
         //Browser request files only per GET request
         if (netReq.getHttpType()!=HttpType.GET) return null;
 
+        //getting urlString from  NetRequest
+        String urlString = netReq.getUrlString();
+
+        //Empty URL reDefined as "/index.html"
+        if ("/".equals(urlString)) urlString = "/index.html";
+
         //defined file in the disc
         String filePath = System.getProperty("user.dir")+
                 File.separator+
                 "web"+
                 File.separator+
-                netReq.getUrlString();
+                urlString;
 
         //search file in disc
         File myFile = new File(filePath);

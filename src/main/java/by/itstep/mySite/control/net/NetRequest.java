@@ -59,12 +59,12 @@ public class NetRequest {
     public void        setRequestType(RequestType inpRequestType){this.requestType = inpRequestType; }//set RequestType
     public RequestType getRequestType(){return this.requestType; }//set DataType
 
-    public String getClientKey(){return this.clientKey;}//data in user request
-    public void   setClientKey(String inpKey){this.clientKey = inpKey;}//data in user request
+    public String   getClientKey(){return this.clientKey;}//data in user request
+    public void     setClientKey(String inpKey){this.clientKey = inpKey;}//data in user request
     public UserRole getUserRole(){return this.userRole;}
 
     public WebFile  getWebFile(){return this.webFile;}
-    public void   setWebFile(WebFile inpWebFile){this.webFile = inpWebFile;}
+    public void     setWebFile(WebFile inpWebFile){this.webFile = inpWebFile;}
     //public ClientResult getClientResult(){return this.clientResult;}
 
 
@@ -86,7 +86,7 @@ public class NetRequest {
 
 
 
-        //updat read data from request
+        //update read data from request
         while (input.available()>0) {
             //read add array
             byte[] addBuffer = new byte[1024*1024];
@@ -107,9 +107,6 @@ public class NetRequest {
                 bytesCount = bytesCount+addBytesCount;
                 }
 
-           // System.out.println("!!!length:"+bytesCount);
-           // System.out.println(new String(buffer,0,bytesCount));
-
             }//while input read not complete
 
 
@@ -123,6 +120,8 @@ public class NetRequest {
 
         this.firstLine = contentString.split("\n")[0]; //for example "GET /index.html HTTP/1.1"
         this.urlString = firstLine.split(" ")[1];      //for example "/index.html"
+
+
         this.defineHttpType(firstLine);//defined request type (GET,POST, .....UNKNOW)
 
 
