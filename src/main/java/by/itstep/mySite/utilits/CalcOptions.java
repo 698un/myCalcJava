@@ -167,7 +167,7 @@ public class CalcOptions {
 
             scanner.close();
         } catch (IOException e) {
-            //MyLogger.getLogger().log(LogState.ERROR,"ERROR CONFIG "+e.getMessage());
+
             e.printStackTrace();
             }
 

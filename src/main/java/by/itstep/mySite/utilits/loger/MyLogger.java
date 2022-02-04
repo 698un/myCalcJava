@@ -70,7 +70,10 @@ public class MyLogger {
         }//log
 
 
-
+    /**
+     * This method write o log file massage
+     * @param record
+     */
     public void writeRecord(String record){
 
         //synchronize access to log file
@@ -143,7 +146,7 @@ public class MyLogger {
         //FATAL,ERROR,WARN,INFO,DEBUG,TRACE,ALL
         this.recordLevel = LogState.valueOf(CalcOptions.getOptions().getStr("logLevel"));
 
-        System.out.println(recordLevel.toString());
+
 
         } //Constructor
 

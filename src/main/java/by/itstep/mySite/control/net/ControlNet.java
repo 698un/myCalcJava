@@ -53,7 +53,7 @@ import java.net.Socket;
                 case WebData : netRequest.getResponseText().sendResponse(output);//отправляем данные в ответ
                                break;
 
-                case Unknow : netRequest.setResponseText(new ResponseText(400,"unknowRequest"));
+                case Unknow : netRequest.setResponseText(new ResponseText(404,"unknowRequest"));
                               netRequest.getResponseText().sendResponse(output);//отправляем данные в ответ
                               break;
 
