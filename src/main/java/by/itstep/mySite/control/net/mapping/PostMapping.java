@@ -12,6 +12,12 @@ import by.itstep.mySite.control.net.enums.RequestType;
 
 public class PostMapping {
 
+    //NECESSRILY
+    private PostMapping(){
+
+
+    }
+
     public static void mapping(NetRequest netReq){
 
         //exit if not POST

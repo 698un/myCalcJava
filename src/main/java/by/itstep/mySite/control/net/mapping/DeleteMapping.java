@@ -11,7 +11,11 @@ import by.itstep.mySite.control.net.command.ControlClient;
 
 public class DeleteMapping {
 
+    //NECESSARiLY
+    private DeleteMapping(){
 
+
+    }
 
     public static void mapping(NetRequest netReq){
 

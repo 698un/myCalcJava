@@ -18,6 +18,8 @@ public class CalcOptions {
     //private ConcurrentHashMap<String,String> optList;
 
     private volatile Map<String,String> optList;
+    private volatile Map<String,Integer> optListInt;
+    private volatile Map<String,Boolean> optListBoolean;
 
     private int imageInBufferCount;
 
