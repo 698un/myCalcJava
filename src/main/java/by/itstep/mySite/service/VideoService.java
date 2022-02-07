@@ -38,7 +38,7 @@ public class VideoService {
 
 
 
-
+/*
     public File getFileObject(String fileName) throws Exception{
 
         try{
@@ -46,6 +46,9 @@ public class VideoService {
             } catch (Exception e) {throw new Exception("file error");}
 
         }//getFileObject
+*/
+
+
 
 
     //===========================SYSTEM====METHODS===========================================

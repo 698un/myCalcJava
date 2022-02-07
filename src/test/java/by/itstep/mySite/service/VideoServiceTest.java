@@ -21,8 +21,7 @@ import java.util.Optional;
 public class VideoServiceTest {
 
 
-    @InjectMocks
-    private VideoService videoService;
+    private VideoService videoService = VideoService.getService();
 
     private VideoRepository videoRepository;
 
@@ -35,8 +34,9 @@ public class VideoServiceTest {
 
         setMock(videoRepository);
         Mockito.when(videoRepository.getVideoList()).thenReturn(new ArrayList<String>());
-        videoService.getVideoList();
 
+
+        videoService.getVideoList();
 
         }//getVideoList
 
@@ -47,16 +47,14 @@ public class VideoServiceTest {
 
         String fileName = "myVideo.mp4";
 
-
         videoRepository = Mockito.mock(VideoRepository.class);
 
         setMock(videoRepository);
-        Mockito.when(videoRepository.getVideoList()).thenReturn(new ArrayList<String>());
-        videoService.getVideoList();
+//        Mockito.when(videoRepository.createNewVideo(Mockito.anyString())).;
+        try {
+            videoService.createMP4(fileName);
 
-
-
-
+            } catch(Exception e) {throw new AssertionError();}
 
     }
 
