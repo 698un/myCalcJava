@@ -41,6 +41,27 @@ public class VideoServiceTest {
         }//getVideoList
 
 
+
+    @Test
+    public void createMP4(){
+
+        String fileName = "myVideo.mp4";
+
+
+        videoRepository = Mockito.mock(VideoRepository.class);
+
+        setMock(videoRepository);
+        Mockito.when(videoRepository.getVideoList()).thenReturn(new ArrayList<String>());
+        videoService.getVideoList();
+
+
+
+
+
+    }
+
+
+
  private void setMock(VideoRepository inpVideoRepository){
 
      try {
