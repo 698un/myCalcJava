@@ -31,8 +31,6 @@ public class ControlVideo {
 
         fileName.toLowerCase();//NECESalary
 
-
-
         try {
 
             StringBuffer sb1 = new StringBuffer("startProcess");

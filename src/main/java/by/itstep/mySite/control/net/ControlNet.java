@@ -80,7 +80,7 @@ import java.net.Socket;
 
 
 
-    public static void main(String[] args){
+    public static void main(String[] args)throws Exception{
 
         int portNumber = Integer.parseInt(args[0]);
         System.out.println(portNumber);
@@ -94,6 +94,7 @@ import java.net.Socket;
 
         catch (Exception e) {
             MyLogger.getLogger().log(LogState.FATAL,"ServerNotRun!!! "+e.getMessage());
+            throw new Exception(e.getMessage());
             }
 
     }//main

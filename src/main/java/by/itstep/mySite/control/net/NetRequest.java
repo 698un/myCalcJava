@@ -146,10 +146,6 @@ public class NetRequest {
 
         //defined bodyString
         this.bodyString = defineBodyString();
-
-        //this.searchCommand();         //defined request  to data from DataBase
-
-        //System.out.println("typeRequest :"+this.requestType);
         }
 
 

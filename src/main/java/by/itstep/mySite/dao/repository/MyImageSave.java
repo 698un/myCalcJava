@@ -25,7 +25,6 @@ public class MyImageSave extends Thread{
      @Override
      public void run(){
 
-
         try{
 
         //Load template format of the imageFile
@@ -62,7 +61,6 @@ public class MyImageSave extends Thread{
                 for (int xe=0;xe<image1.getWidth();xe++) {
 
                 //pixelColor = new Color( 127+lineByte[xe]*3+0,127+lineByte[xe]*3+1,127+lineByte[xe]*3+2);
-
 
                     colR = 255;
                     colG = 255;

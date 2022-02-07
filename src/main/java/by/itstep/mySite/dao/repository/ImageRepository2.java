@@ -68,7 +68,6 @@ public class ImageRepository2 {
                 }//if getting pixelLine
             }
 
-
         }//next i
 
 
@@ -122,8 +121,7 @@ public class ImageRepository2 {
         //flush in searched image line of resultat
         return currentImage.flushComplettePixelLine(complettePixelLine);
 
-
-    }
+        }
 
     private MyImage getImageByFrameNumber(int inpFrame) {
         synchronized (MyLocker.getLocker()) {
@@ -175,9 +173,9 @@ public class ImageRepository2 {
             } catch (Exception e){};
 
 
-        //set options from comfig
-        this.imgWidth= CalcOptions.getOptions().getInt(   "imageWidth" );
-        this.imgHeight=CalcOptions.getOptions().getInt(   "imageHeight");
+        //set options from config
+        this.imgWidth=           CalcOptions.getOptions().getInt(   "imageWidth" );
+        this.imgHeight=          CalcOptions.getOptions().getInt(   "imageHeight");
         this.imgAntialiasing =   CalcOptions.getOptions().getInt("antialiasing" );
 
         this.imagePath = CalcOptions.getOptions().getStr("appPath")+

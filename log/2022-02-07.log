@@ -13804,3 +13804,45 @@
 [DEBUG]	2022-02-07 15:47:01.784	ControlCalculate	Client:mbcdmuirwc post resultat
 [DEBUG]	2022-02-07 15:47:01.795	ControlCalculate	Client:mbcdmuirwc get task:{"sceneKey":"gkyyqcbmsedgxcpafoyf","frame":10,"line":346}
 [DEBUG]	2022-02-07 15:47:01.806	ControlCalculate	Client:mbcdmuirwc post resultat
+[INFO]	2022-02-07 18:55:56.055	App	Start service
+[DEBUG]	2022-02-07 18:56:13	ControlServer	Client none ask server status...
+[INFO]	2022-02-07 18:56:14.402	ControlClient	Add new client. ClientKey:vwgowqajsj
+[DEBUG]	2022-02-07 18:56:15.815	ControlServer	Client vwgowqajsj ask server status...
+[DEBUG]	2022-02-07 18:56:15.840	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":0}
+[DEBUG]	2022-02-07 18:56:16.465	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:16.479	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":1}
+[DEBUG]	2022-02-07 18:56:16.712	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:16.728	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":2}
+[DEBUG]	2022-02-07 18:56:16.914	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:16.949	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":3}
+[DEBUG]	2022-02-07 18:56:17.096	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:17.112	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":4}
+[DEBUG]	2022-02-07 18:56:17.247	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:17.264	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":5}
+[DEBUG]	2022-02-07 18:56:17.381	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:17.398	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":6}
+[DEBUG]	2022-02-07 18:56:17.498	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:17.521	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":7}
+[DEBUG]	2022-02-07 18:56:17.618	ControlCalculate	Client:vwgowqajsj post resultat
+[DEBUG]	2022-02-07 18:56:17.635	ControlCalculate	Client:vwgowqajsj get task:{"sceneKey":"bovncgdbrgkpubbhkopt","frame":0,"line":8}
+[DEBUG]	2022-02-07 18:56:17.728	ControlCalculate	Client:vwgowqajsj post resultat
+[INFO]	2022-02-07 18:56:17.743	ControlClient	Client vwgowqajsj leave from calculation
+[WARN]	2022-02-07 18:56:18.744	ControlCalculate	Wrong user gets task
+[DEBUG]	2022-02-07 18:56:18.983	ControlServer	Client vwgowqajsj ask server status...
+[INFO]	2022-02-07 18:56:23.500	ControlClient	root connected to server
+[INFO]	2022-02-07 18:56:27.892	VideoService	Init video service
+[DEBUG]	2022-02-07 18:56:34.676	ControlVideo	request of videoFile:null.mp4
+[INFO]	2022-02-07 18:56:34.677	ControlVideo	Send videoFile to browser: null.mp4
+[INFO]	2022-02-07 19:15:30.855	App	Start service
+[INFO]	2022-02-07 19:16:44.072	App	Start service
+[INFO]	2022-02-07 19:19:17.941	App	Start service
+[INFO]	2022-02-07 19:19:59.189	App	Start service
+[INFO]	2022-02-07 19:21:03.926	App	Start service
+[INFO]	2022-02-07 19:21:45.966	App	Start service
+[INFO]	2022-02-07 19:23:29.530	App	Start service
+[INFO]	2022-02-07 19:24:01.427	App	Start service
+[DEBUG]	2022-02-07 19:24:04.726	ControlServer	Client srnfribrjv ask server status...
+[DEBUG]	2022-02-07 19:31:13.277	ControlServer	Client srnfribrjv ask server status...
+[INFO]	2022-02-07 20:16:57.614	VideoService	Init video service
+[INFO]	2022-02-07 20:17:32.753	VideoService	Init video service
+[INFO]	2022-02-07 20:31:19.166	VideoService	Init video service

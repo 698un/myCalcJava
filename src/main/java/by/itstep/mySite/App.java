@@ -24,9 +24,6 @@ public class App {
                 appPath
                 );
 
-
-
-
         //set levels for registry events
 
         /**
@@ -35,13 +32,6 @@ public class App {
             testFile.createNewFile();
             } catch (Exception e) {e.printStackTrace();};
         */
-
-
-
-
-
-
-
 
         MyLogger.getLogger().log(LogState.INFO,  "Start service");
 
@@ -54,8 +44,14 @@ public class App {
 
 
         //Запуск WEb контроллера
-        ControlNet.main(arg);
-        System.out.println("Start");
+        try {
+            ControlNet.main(arg);
+            System.out.println("Start");
+            } catch(Exception e) {
+                System.out.println("Server Not start");
+                }
+
+
 
 
     }

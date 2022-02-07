@@ -1,6 +1,8 @@
 package by.itstep.mySite.control.net.entity;
 import by.itstep.mySite.control.net.NetRequest;
 import by.itstep.mySite.control.net.enums.*;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,8 +17,13 @@ public class WebFile {
 
     public File   getFile(){    return this.fileObject;}
 
-    public void   setFile(File cFile){  this.fileObject = cFile;
-                                        this.defineFileExt();}
+
+
+
+    public void   setFile(File cFile) throws Exception {
+        this.fileObject = cFile;
+        this.defineFileExt();
+        }//setFile
 
 
 
@@ -25,7 +32,7 @@ public class WebFile {
      * @param netReq
      * @return
      */
-    public static WebFile getStaticWebFile(NetRequest netReq){
+    public static WebFile getStaticWebFile(NetRequest netReq) {
 
         //Browser request files only per GET request
         if (netReq.getHttpType()!=HttpType.GET) return null;
@@ -47,13 +54,23 @@ public class WebFile {
         File myFile = new File(filePath);
 
         if (myFile.exists()==false) {
-                    //System.out.println("такого нет");
+
                     return null;
                     }
 
         System.out.println("Проверяем наличие файла: "+ myFile.getAbsoluteFile());
         System.out.println("такой есть!!!");
-        WebFile result = new WebFile(myFile);
+
+        WebFile result;
+          try{
+              result = new WebFile(myFile);
+          } catch (Exception e) {
+              MyLogger.getLogger().log(LogState.WARN,"File "+urlString+" not exists");
+              return null;
+
+          }
+
+
 
         //mark request as static content file before return object of webFile
         netReq.setRequestType(RequestType.WebFile);
@@ -64,25 +81,33 @@ public class WebFile {
 
 
     //constructor
-    public WebFile(File file1){
+    public WebFile(File file1) throws Exception{
            this.fileObject = file1;
+            try {
+                this.defineFileExt();
+                } catch(Exception e) {throw new Exception (e.getMessage());}
 
-           this.defineFileExt();
            }//constructor
 
-    private void defineFileExt(){
+    private void defineFileExt() throws Exception{
 
         //extract fileExt in LowerCase representation
         int indexDot = this.fileObject.getAbsolutePath().lastIndexOf(".");
         this.fileExt = this.fileObject.getAbsolutePath().substring(indexDot).toLowerCase();
 
         //defined MimeType
-        if ("jpg".equals(fileExt)) this.mimeType = "image/jpeg";
-        if ("js".equals(fileExt))  this.mimeType = "text/javascript";
-        if ("html".equals(fileExt))this.mimeType = "text/html";
-        if ("gif".equals(fileExt)) this.mimeType = "image/gif";
-        if ("ico".equals(fileExt)) this.mimeType = "image/vnd.microsoft.icon";
-        if ("mp4".equals(fileExt)) this.mimeType = "video/mp4";
+        if (".jpg".equals(fileExt)) this.mimeType = "image/jpeg";
+        if (".js".equals(fileExt))  this.mimeType = "text/javascript";
+        if (".html".equals(fileExt))this.mimeType = "text/html";
+        if (".gif".equals(fileExt)) this.mimeType = "image/gif";
+        if (".ico".equals(fileExt)) this.mimeType = "image/vnd.microsoft.icon";
+        if (".mp4".equals(fileExt)) this.mimeType = "video/mp4";
+
+
+        if (this.mimeType==null) {
+                    System.out.println(this.fileExt);
+                    throw new Exception("file ext not deifned");
+                    }
 
         }//defineFileExt
 
