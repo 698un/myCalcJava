@@ -9,7 +9,7 @@ package by.itstep.mySite.control.net.command;
 import by.itstep.mySite.control.net.NetRequest;
 import by.itstep.mySite.control.net.enums.RequestType;
 import by.itstep.mySite.control.net.enums.UserRole;
-import by.itstep.mySite.dao.repository.ImageRepository2;
+import by.itstep.mySite.dao.repository.ImageRepository;
 import by.itstep.mySite.service.AcceptException;
 
 import by.itstep.mySite.service.ClientService;
@@ -37,7 +37,7 @@ public class ControlServer {
             int imgWidth = sysService.getImageWidth();
             int imgAntialiasing = sysService.getImageAntialiasing();
 
-            int fps = ImageRepository2.getRepository().getFps();
+            int fps = ImageRepository.getRepository().getFps();
 
 
             StringBuffer sb1 = new StringBuffer("");

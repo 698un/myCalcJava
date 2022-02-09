@@ -3,7 +3,7 @@ package by.itstep.mySite.service;
 
 import by.itstep.mySite.dao.model.PixelLine;
 import by.itstep.mySite.dao.repository.ClientRepositoryHM;
-import by.itstep.mySite.dao.repository.ImageRepository2;
+import by.itstep.mySite.dao.repository.ImageRepository;
 import by.itstep.mySite.utilits.CalcOptions;
 import by.itstep.mySite.utilits.MyLocker;
 import by.itstep.mySite.utilits.loger.LogState;
@@ -19,7 +19,7 @@ public class TaskService {
 
 
     public String getSceneKey(){
-        return ImageRepository2.getRepository().getSceneKey();
+        return ImageRepository.getRepository().getSceneKey();
         }//get SceneKey
 
     public PixelLine getNextTask(String clientKey){
@@ -29,7 +29,7 @@ public class TaskService {
 
         //return new task from imageRepository
         synchronized(MyLocker.getLocker()) {
-            return ImageRepository2.getRepository().getEmptyPixelLine(clientKey);
+            return ImageRepository.getRepository().getEmptyPixelLine(clientKey);
             }
 
         }//get New Task (PixelLine
@@ -44,7 +44,7 @@ public class TaskService {
         try {
 
             synchronized(MyLocker.getLocker()) {
-                return ImageRepository2.getRepository().postCompletteTask(complettePixelLine);
+                return ImageRepository.getRepository().postCompletteTask(complettePixelLine);
                 }//synchronized
 
             } catch (Exception e) {

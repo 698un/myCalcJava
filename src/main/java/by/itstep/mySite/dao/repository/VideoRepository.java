@@ -139,6 +139,18 @@ public class VideoRepository {
     //constructor
     private VideoRepository(){
 
+        //create folder if not exist
+        String imageFolder = CalcOptions.getOptions().getStr("applicationPath")+
+                File.separator+
+                CalcOptions.getOptions().getStr("videoResultatFolder")+
+                File.separator;
+        try {
+            new File(imageFolder).mkdirs();
+            } catch (Exception e) {e.printStackTrace();}
+
+
+
+
         //Создание файла присзнака что можно склеивать
         videoSetComplette();
 

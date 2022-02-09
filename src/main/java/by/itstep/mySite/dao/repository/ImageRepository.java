@@ -8,10 +8,13 @@ import by.itstep.mySite.dao.model.MyImage;
 import by.itstep.mySite.utilits.MyLocker;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Random;
 
 
-public class ImageRepository2 {
+public class ImageRepository {
 
     private int imgWidth;
     private int imgHeight;
@@ -46,7 +49,12 @@ public class ImageRepository2 {
     private int imgCountInBuffer;
     private int newFrameNum;
 
-
+    /**
+     * This method extract empty pixelLine for calculation
+     * and mark as clientKey in repository (for identification resultat)
+     * @param clientKey
+     * @return
+     */
     public PixelLine getEmptyPixelLine(String clientKey) {
 
         PixelLine currentPixelLine;
@@ -59,8 +67,8 @@ public class ImageRepository2 {
                 currentPixelLine = imgInBuffer[i].getNewPixelLine(clientKey);
             }
 
-            //if free pixelLine  is exist then signed thes pixel line
-            //of clientKey and return it
+            //if free pixelLine  is exist then mark this pixel line
+            //as clientKey and return it
             synchronized (MyLocker.getLocker()) {
                 if (currentPixelLine != null) {
                     currentPixelLine.setClientKey(clientKey);//mark clientKey
@@ -121,7 +129,7 @@ public class ImageRepository2 {
         //flush in searched image line of resultat
         return currentImage.flushComplettePixelLine(complettePixelLine);
 
-        }
+    }
 
     private MyImage getImageByFrameNumber(int inpFrame) {
         synchronized (MyLocker.getLocker()) {
@@ -143,7 +151,7 @@ public class ImageRepository2 {
             //deleting in cicle all files in directory
             for (File myFile : new File(folderPath).listFiles())
                 if (myFile.isFile()) myFile.delete();
-            } catch (Exception e) {throw new Exception(e.getMessage());}
+        } catch (Exception e) {throw new Exception(e.getMessage());}
 
 
     }//deleteAllImages
@@ -155,19 +163,30 @@ public class ImageRepository2 {
      */
     public static void setNull(){
         singleRepository=null;
-        }
+    }
 
-    private static ImageRepository2 singleRepository;
+    private static ImageRepository singleRepository;
 
-    public static ImageRepository2 getRepository(){
-        if (singleRepository==null )  singleRepository = new ImageRepository2();
+    public static ImageRepository getRepository(){
+        if (singleRepository==null )  singleRepository = new ImageRepository();
         return singleRepository;
-        }
+    }
 
 
     //constructor
-    private ImageRepository2() {
+    private ImageRepository() {
 
+        //create folder if not exist
+        String imageFolder = CalcOptions.getOptions().getStr("applicationPath")+
+                             File.separator+
+                             CalcOptions.getOptions().getStr("imageResultatFolder")+
+                             File.separator;
+        try {
+            new File(imageFolder).mkdirs();
+            } catch (Exception e) {e.printStackTrace();}
+
+
+        //Deleting All image in resultat Folder
         try {
             this.deleteAllImages();
             } catch (Exception e){};
@@ -179,40 +198,38 @@ public class ImageRepository2 {
         this.imgAntialiasing =   CalcOptions.getOptions().getInt("antialiasing" );
 
         this.imagePath = CalcOptions.getOptions().getStr("appPath")+
-                         File.separator+
-                         CalcOptions.getOptions().getStr("imageResultatPath");
+                File.separator+
+                CalcOptions.getOptions().getStr("imageResultatPath");
 
         this.fps = CalcOptions.getOptions().getInt("fps");
 
-       this.imgCountInBuffer =CalcOptions.getOptions().getInt("imageInBuffer");//ImageInBufferCount();
+        this.imgCountInBuffer =CalcOptions.getOptions().getInt("imageInBuffer");//ImageInBufferCount();
 
         this.imgInBuffer = new MyImage[imgCountInBuffer];
 
         for (int i=0;i<imgCountInBuffer;i++){
             imgInBuffer[i] = new MyImage(this.imgWidth,
-                                         this.imgHeight,
-                                         i);
+                    this.imgHeight,
+                    i);
 
             newFrameNum = imgCountInBuffer;
 
-            }//Next i
+        }//Next i
 
         //generated sceneKey
         this.sceneKey = getNewKey();
 
-
-
-
-
-
     }//constructor
+
+
+
 
     private String getNewKey(){
         Random rnd = new Random();
         StringBuilder sb1=new StringBuilder("");
         for (int i=0;i<20;i++) sb1.append((char)('a'+rnd.nextInt('z'-'a')));
         return sb1.toString();
-        }//getNewKey
+    }//getNewKey
 
 
 }

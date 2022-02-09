@@ -2,19 +2,15 @@
 package by.itstep.mySite.service;
 
 import by.itstep.mySite.dao.repository.VideoRepository;
-import by.itstep.mySite.utilits.loger.LogState;
-import by.itstep.mySite.utilits.loger.MyLogger;
+
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.io.File;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Optional;
+
 
 
 @ExtendWith(MockitoExtension.class)
@@ -60,6 +56,12 @@ public class VideoServiceTest {
 
 
 
+
+
+    /**
+     * This method extracts singleton object from VideoRepository
+     * @param inpVideoRepository
+     */
  private void setMock(VideoRepository inpVideoRepository){
 
      try {

@@ -1,6 +1,7 @@
 
-package by.itstep.mySite.service;
+package by.itstep.mySite.dao.repository;
 
+import by.itstep.mySite.dao.model.PixelLine;
 import by.itstep.mySite.dao.repository.VideoRepository;
 import by.itstep.mySite.utilits.loger.LogState;
 import by.itstep.mySite.utilits.loger.MyLogger;
@@ -18,54 +19,49 @@ import java.util.Optional;
 
 
 @ExtendWith(MockitoExtension.class)
-public class VideoServiceTest {
+public class ImageRepository2Test {
 
 
-    private VideoService videoService = VideoService.getService();
+    private ImageRepository imgRep = ImageRepository.getRepository();
 
-    private VideoRepository videoRepository;
+
+    //private VideoRepository videoRepository;
+
+    /**
+     *  Test of method
+     *  public PixelLine getEmptyPixelLine(String clientKey)
+     */
 
     @Test
-    public void getVideoList()throws Exception {
+    public void getEmptyPixelLine()throws Exception {
 
 
 //        @Before
-        videoRepository = Mockito.mock(VideoRepository.class);
+        String clientKey = "1234567890";
 
-        setMock(videoRepository);
-        Mockito.when(videoRepository.getVideoList()).thenReturn(new ArrayList<String>());
+        //ImageRepository imgRep= Mockito.mock(VideoRepository.class);
+         imgRep= Mockito.mock(ImageRepository.class);
+
+        setMock(imgRep);
+        Mockito.when(imgRep.getEmptyPixelLine(clientKey)).thenReturn(new PixelLine(0,0));
 
 
-        videoService.getVideoList();
+        imgRep.getEmptyPixelLine(clientKey);
+
 
     }//getVideoList
 
 
 
-    @Test
-    public void createMP4(){
-
-        String fileName = "myVideo.mp4";
-
-        videoRepository = Mockito.mock(VideoRepository.class);
-
-        setMock(videoRepository);
-//        Mockito.when(videoRepository.createNewVideo(Mockito.anyString())).;
-        try {
-            videoService.createMP4(fileName);
-
-        } catch(Exception e) {throw new AssertionError();}
-
-    }
 
 
 
-    private void setMock(VideoRepository inpVideoRepository){
+    private void setMock(ImageRepository inpImageRepository){
 
         try {
-            Field singleRep = VideoRepository.class.getDeclaredField("singleRepository");
+            Field singleRep = ImageRepository.class.getDeclaredField("singleRepository");
             singleRep.setAccessible(true);
-            singleRep.set(singleRep,inpVideoRepository );
+            singleRep.set(singleRep,inpImageRepository );
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }

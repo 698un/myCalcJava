@@ -3,7 +3,7 @@ package by.itstep.mySite.service;
 
 
 import by.itstep.mySite.dao.model.PixelLine;
-import by.itstep.mySite.dao.repository.ImageRepository2;
+import by.itstep.mySite.dao.repository.ImageRepository;
 import by.itstep.mySite.dao.repository.VideoRepository;
 import by.itstep.mySite.utilits.CalcOptions;
 import by.itstep.mySite.utilits.loger.LogState;
@@ -13,21 +13,21 @@ public class SystemService {
 
 
     public int getImageWidth(){
-        return ImageRepository2.getRepository().getImageWidth();
+        return ImageRepository.getRepository().getImageWidth();
         }//get width of image
 
     public int getImageHeight(){
-        return ImageRepository2.getRepository().getImageHeight();
+        return ImageRepository.getRepository().getImageHeight();
         }//get height of image
 
     public int getImageAntialiasing(){
-        return ImageRepository2.getRepository().getImageAntialiasing();
+        return ImageRepository.getRepository().getImageAntialiasing();
         }//get antia of image
 
     public void reset()throws Exception{
         try{
         CalcOptions.setNull();
-        ImageRepository2.setNull();
+        ImageRepository.setNull();
         VideoRepository.setNull();
 
         MyLogger.getLogger().log(LogState.INFO,"reset calculation");
