@@ -176,14 +176,19 @@ public class ImageRepository {
     //constructor
     private ImageRepository() {
 
-        //create folder if not exist
+        //defined path to imageResultatFolder
         String imageFolder = CalcOptions.getOptions().getStr("applicationPath")+
                              File.separator+
                              CalcOptions.getOptions().getStr("imageResultatFolder")+
                              File.separator;
+
+        //create folder for resuiltat if not exist
         try {
             new File(imageFolder).mkdirs();
-            } catch (Exception e) {e.printStackTrace();}
+            } catch (Exception e) {}
+
+
+
 
 
         //Deleting All image in resultat Folder
