@@ -128,8 +128,6 @@ public class VideoRepository {
 
 
     //SYSTEM METHODS========================================================================
-
-
     public static void setNull(){
         singleRepository=null;
         }//setNull
