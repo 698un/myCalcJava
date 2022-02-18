@@ -27,14 +27,6 @@ public class App {
 
         //folder_correct
 
-
-
-
-
-
-
-
-
         MyLogger.getLogger().log(LogState.INFO,  "Start service");
 
         String[] arg = {CalcOptions.getOptions().getStr("port"),"---"};
