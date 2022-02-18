@@ -8,6 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import by.itstep.mySite.dao.model.Client;
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 
 public class ClientRepositoryHM implements iClientRepository{
@@ -23,7 +25,8 @@ public class ClientRepositoryHM implements iClientRepository{
 
 
         if (clientList.get(inpKey)==null)  {
-                            System.out.println("NOT CONTAINT");
+                            //System.out.println("NOT CONTAINT");
+                            MyLogger.getLogger().log(LogState.WARN,"Client "+inpKey+" not CONTAINT");
                             throw new Exception("UNKNOW CLIENT");
                             }
         clientList.remove(inpKey);
@@ -83,7 +86,8 @@ public class ClientRepositoryHM implements iClientRepository{
 
 
            //............
-           System.out.println("Clear_OLD_CLIENTS");
+           //System.out.println("Clear_OLD_CLIENTS");
+           MyLogger.getLogger().log(LogState.DEBUG,"clear old Clients...");
 
            //Client client1;
 //           String[] keyList = (String[]) clientList.keySet().toArray();

@@ -28,6 +28,10 @@ class ServerStatus {
         this.rotate_angle=0;
         this.rotate_w = 0;
 
+        this.lastCorrectFrame=-1;
+        this.lastCorrectLine = -1;
+
+
         }//constuctor
 
     //метод перестраивает canvas если ищменился размер

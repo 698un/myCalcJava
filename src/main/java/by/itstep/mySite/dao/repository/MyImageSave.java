@@ -26,8 +26,14 @@ public class MyImageSave extends Thread{
      public void run(){
 
 
-        try{
+        //Create folder for resultat of images if not exists
+        String resImageFolderPath = CalcOptions.getOptions().getStr("applicationPath")+
+                                    File.separator+
+                                    CalcOptions.getOptions().getStr("imageResultatFolder");
+        new File(resImageFolderPath).mkdirs();
 
+
+        try{
         //Load template format of the imageFile
         File file = new File(CalcOptions.getOptions().getApplicationPath()+
                              File.separator+

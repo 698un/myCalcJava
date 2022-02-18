@@ -1,6 +1,8 @@
 package by.itstep.mySite.control.net.entity;
 import by.itstep.mySite.control.net.NetRequest;
 import by.itstep.mySite.control.net.enums.*;
+import by.itstep.mySite.utilits.loger.LogState;
+import by.itstep.mySite.utilits.loger.MyLogger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -51,9 +53,11 @@ public class WebFile {
                     return null;
                     }
 
-        System.out.println("Проверяем наличие файла: "+ myFile.getAbsoluteFile());
-        System.out.println("такой есть!!!");
+        //System.out.println("Проверяем наличие файла: "+ myFile.getAbsoluteFile());
+       // System.out.println("такой есть!!!");
         WebFile result = new WebFile(myFile);
+        MyLogger.getLogger().log(LogState.DEBUG,"User reguest file:"+urlString);
+
 
         //mark request as static content file before return object of webFile
         netReq.setRequestType(RequestType.WebFile);
@@ -95,7 +99,9 @@ public class WebFile {
 
             StringBuffer response = new StringBuffer("HTTP/1.1 200 OK\n");
 
-            System.out.println("отправляем файл "+this.fileObject.getAbsoluteFile());
+            //System.out.println("отправляем файл "+this.fileObject.getAbsoluteFile());
+            MyLogger.getLogger().log(LogState.DEBUG,"Send file to user: "+this.fileObject.getAbsoluteFile());
+
 
             response.append("Last-Modified: " + new java.util.Date(this.fileObject.lastModified()) + "\n");
             response.append("Content-Length: " + this.fileObject.length() + "\n");

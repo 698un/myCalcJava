@@ -70,7 +70,8 @@ import java.net.Socket;
         }//try
 
         catch(Exception e) {
-            e.printStackTrace();
+            MyLogger.getLogger().log(LogState.ERROR,e.getMessage());
+            //e.printStackTrace();
             }//catch
 
 
@@ -83,7 +84,8 @@ import java.net.Socket;
     public static void main(String[] args){
 
         int portNumber = Integer.parseInt(args[0]);
-        System.out.println(portNumber);
+        MyLogger.getLogger().log(LogState.INFO,"Application up on port "+args[0]);
+        //System.out.println(portNumber);
 
         try {
             ServerSocket server = new ServerSocket(portNumber);

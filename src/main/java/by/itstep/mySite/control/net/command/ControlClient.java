@@ -54,7 +54,7 @@ public class ControlClient {
     public static String exitClient(NetRequest netReq) throws Exception{
 
 
-        System.out.println(CalcOptions.getOptions().getCurrentRootKey());
+        //System.out.println(CalcOptions.getOptions().getCurrentRootKey());
 
 
         try {
@@ -89,7 +89,8 @@ public class ControlClient {
      */
     public static String getRootKey(NetRequest netReq) throws Exception {
 
-        System.out.println("ROOT_KEY");
+        //System.out.println("ROOT_KEY");
+        MyLogger.getLogger().log(LogState.INFO,"user ask rootKey");
 
         try {
 
@@ -110,6 +111,7 @@ public class ControlClient {
 
             } catch (Exception e) {
               //netReq.setRequestType(RequestType.WebData);
+              MyLogger.getLogger().log(LogState.WARN,"wrong access to rootKey");
               throw new Exception (e.getMessage());
               }
 

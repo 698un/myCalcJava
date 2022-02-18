@@ -6,6 +6,7 @@ package by.itstep.mySite;
 
 
 import by.itstep.mySite.control.net.ControlNet;
+import by.itstep.mySite.utilits.CalcOptions;
 import by.itstep.mySite.utilits.loger.LogState;
 import by.itstep.mySite.utilits.loger.MyLogger;
 
@@ -20,7 +21,7 @@ public class App {
         //this log_to_file
         appPath = System.getProperty("user.dir");
 
-        System.out.println("Папка программы: "+
+        System.out.println("Application folder: "+
                 appPath
                 );
 
@@ -43,7 +44,7 @@ public class App {
 
         MyLogger.getLogger().log(LogState.INFO,  "Start service");
 
-        String[] arg = {"8091","---"};
+        String[] arg = {CalcOptions.getOptions().getStr("port"),"---"};
 
         //запуск управления с консоли
         //ControlConsole.main(arg);
