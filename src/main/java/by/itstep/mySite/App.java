@@ -25,15 +25,8 @@ public class App {
                 appPath
                 );
 
+        //folder_correct
 
-        //set levels for registry events
-
-        /**
-        File testFile = new File("test.txt");
-        try {
-            testFile.createNewFile();
-            } catch (Exception e) {e.printStackTrace();};
-        */
 
 
 
