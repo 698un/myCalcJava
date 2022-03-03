@@ -46,7 +46,6 @@ public class ControlCalculate {
             sb1.append("\"line\":"  + pixLine.getLineNumber());
             sb1.append("}");
 
-
             MyLogger.getLogger().log(LogState.DEBUG,"Client:"+netReq.getClientKey()+" get task:"+sb1);
 
             return sb1.toString();

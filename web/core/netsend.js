@@ -35,6 +35,8 @@ function sendPostServerArray2(urlStr,arr) {
         strAll+=str1;
         }//next i
 
+   //alert(strAll.length);
+
     if (strAll.length<=1) alert("ErrorNullWidth");
 
     let answerStr = sendAnyHttp("POST",urlStr,strAll);

@@ -20,17 +20,16 @@ public class ControlVideo {
 
         //Security verify(only for admin)
         String adminKey = CalcOptions.getOptions().getCurrentRootKey();
-        System.out.println("adminKey:"+adminKey);
+        //System.out.println("adminKey:"+adminKey);
         if (!netReq.getClientKey().equals(adminKey)) {
             MyLogger.getLogger().log(LogState.WARN,"Not valid rootKey for create video");
             throw new Exception("access denied (only for Administrator)!!!");
             }//if root key not valid
 
-        //append ext for filename
-        if (fileName.indexOf(".mp4")<0) fileName+=".mp4";
-
         fileName.toLowerCase();//NECESalary
 
+        //append ext for filename
+        if (fileName.indexOf(".mp4")<0) fileName+=".mp4";
 
 
         try {

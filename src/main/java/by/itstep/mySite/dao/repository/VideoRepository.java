@@ -84,9 +84,9 @@ public class VideoRepository {
         }//getFileComplettePath
 
     /**
-     * This method search completting videoFiles
-     * @return ArrayList of filenames
-     */
+    * This method search completting videoFiles
+    * @return ArrayList of filenames
+    */
     public ArrayList<String> getVideoList(){
 
         String path = CalcOptions.getOptions().getStr("applicationPath")+
@@ -117,8 +117,6 @@ public class VideoRepository {
      * @return
      */
     public File getVideo(String fileName){
-
-
         return null;
         }
 
