@@ -7,6 +7,7 @@ package by.itstep.mySite;
 
 import by.itstep.mySite.control.net.ControlNet;
 import by.itstep.mySite.utilits.CalcOptions;
+import by.itstep.mySite.utilits.MyUtil;
 import by.itstep.mySite.utilits.loger.LogState;
 import by.itstep.mySite.utilits.loger.MyLogger;
 
@@ -20,6 +21,8 @@ public class App {
     public static void main(String[] args) {
         //this log_to_file
         appPath = System.getProperty("user.dir");
+
+        MyUtil.startLog();
 
         System.out.println("Application folder: "+
                 appPath
